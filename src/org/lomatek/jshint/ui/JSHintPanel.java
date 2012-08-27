@@ -21,17 +21,17 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package org.lomatek.jslint.ui;
+package org.lomatek.jshint.ui;
 
 import com.sun.java.swing.plaf.windows.resources.windows;
 import javax.swing.JPanel;
-import org.lomatek.jslint.JSLintOptions;
+import org.lomatek.jshint.JSHintOptions;
 
-final class JSLintPanel extends javax.swing.JPanel {
+final class JSHintPanel extends javax.swing.JPanel {
 
-    private final JSLintOptionsPanelController controller;
+    private final JSHintOptionsPanelController controller;
 
-    JSLintPanel(JSLintOptionsPanelController controller) {
+    JSHintPanel(JSHintOptionsPanelController controller) {
 	this.controller = controller;
 	initComponents();
 	// TODO listen to changes in form fields and call controller.changed()
@@ -89,110 +89,110 @@ final class JSLintPanel extends javax.swing.JPanel {
         preDef = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
 
-        org.openide.awt.Mnemonics.setLocalizedText(devel, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.devel.text")); // NOI18N
-        devel.setToolTipText(org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.devel.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(devel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.devel.text")); // NOI18N
+        devel.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.devel.toolTipText")); // NOI18N
         devel.setName("devel"); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(browser, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.browser.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(browser, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.browser.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(node, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.node.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(node, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.node.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(rhino, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.rhino.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(rhino, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.rhino.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(widget, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.widget.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(widget, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.widget.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(windows, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.windows.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(windows, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.windows.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(passfail, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.passfail.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(passfail, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.passfail.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(safe, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.safe.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(safe, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.safe.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(adsafe, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.adsafe.text")); // NOI18N
-        adsafe.setToolTipText(org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.adsafe.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(adsafe, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.adsafe.text")); // NOI18N
+        adsafe.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.adsafe.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(bitwise, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.bitwise.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(bitwise, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(newcap, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.newcap.text")); // NOI18N
-        newcap.setToolTipText(org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.newcap.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(newcap, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.newcap.text")); // NOI18N
+        newcap.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.newcap.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(confusion, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.confusion.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(confusion, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.confusion.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(tContinue, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.tContinue.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(tContinue, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.tContinue.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(debug, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.debug.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(debug, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.debug.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(eqeq, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.eqeq.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(eqeq, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.eqeq.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(es5, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.es5.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(es5, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.es5.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(evil, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.evil.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(evil, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.evil.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(forin, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.forin.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(forin, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.forin.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(nomen, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.nomen.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(nomen, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nomen.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(plusplus, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.plusplus.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(plusplus, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.plusplus.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(regexp, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.regexp.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(regexp, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.regexp.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(undef, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.undef.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(undef, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.undef.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(unparam, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.unparam.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(unparam, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.unparam.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(sloppy, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.sloppy.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(sloppy, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.sloppy.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(sub, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.sub.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(sub, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.sub.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(vars, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.vars.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(vars, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.vars.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(white, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.white.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(white, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.white.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(css, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.css.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(css, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.css.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(cap, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.cap.text")); // NOI18N
-        cap.setToolTipText(org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.cap.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(cap, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.cap.text")); // NOI18N
+        cap.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.cap.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(on, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.on.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(on, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.on.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(fragment, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.fragment.text")); // NOI18N
-        fragment.setToolTipText(org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.fragment.toolTipText")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(fragment, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.fragment.text")); // NOI18N
+        fragment.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.fragment.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jUnselectAll, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.jUnselectAll.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jUnselectAll, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jUnselectAll.text")); // NOI18N
         jUnselectAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jUnselectAllActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jSelectAll, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.jSelectAll.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jSelectAll, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jSelectAll.text")); // NOI18N
         jSelectAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jSelectAllActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.jLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jLabel1.text")); // NOI18N
 
-        indent.setText(org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.indent.text")); // NOI18N
+        indent.setText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.indent.text")); // NOI18N
         indent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 indentActionPerformed(evt);
             }
         });
 
-        maxlen.setText(org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.maxlen.text")); // NOI18N
+        maxlen.setText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxlen.text")); // NOI18N
 
-        maxerr.setText(org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.maxerr.text")); // NOI18N
+        maxerr.setText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxerr.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.jLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jLabel2.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.jLabel3.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jLabel3.text")); // NOI18N
 
         preDef.setColumns(20);
         preDef.setRows(5);
         jScrollPane1.setViewportView(preDef);
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(JSLintPanel.class, "JSLintPanel.jLabel4.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jLabel4.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -428,90 +428,90 @@ final class JSLintPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jSelectAllActionPerformed
 
     void load() {
-	devel.setSelected(JSLintOptions.getInstance().getOption("devel"));
-	bitwise.setSelected(JSLintOptions.getInstance().getOption("bitwise"));
-	regexp.setSelected(JSLintOptions.getInstance().getOption("regexp"));
-	browser.setSelected(JSLintOptions.getInstance().getOption("browser"));
-	confusion.setSelected(JSLintOptions.getInstance().getOption("confusion"));
-	undef.setSelected(JSLintOptions.getInstance().getOption("undef"));
-	node.setSelected(JSLintOptions.getInstance().getOption("node"));
-	tContinue.setSelected(JSLintOptions.getInstance().getOption("continue"));
-	unparam.setSelected(JSLintOptions.getInstance().getOption("unparam"));
-	rhino.setSelected(JSLintOptions.getInstance().getOption("rhino"));
-	debug.setSelected(JSLintOptions.getInstance().getOption("debug"));
-	sloppy.setSelected(JSLintOptions.getInstance().getOption("sloppy"));
-	widget.setSelected(JSLintOptions.getInstance().getOption("widget"));
-	eqeq.setSelected(JSLintOptions.getInstance().getOption("eqeq"));
-	sub.setSelected(JSLintOptions.getInstance().getOption("sub"));
-	windows.setSelected(JSLintOptions.getInstance().getOption("windows"));
-	es5.setSelected(JSLintOptions.getInstance().getOption("es5"));
-	vars.setSelected(JSLintOptions.getInstance().getOption("vars"));
-	evil.setSelected(JSLintOptions.getInstance().getOption("evil"));
-	white.setSelected(JSLintOptions.getInstance().getOption("white"));
-	passfail.setSelected(JSLintOptions.getInstance().getOption("passfail"));
-	forin.setSelected(JSLintOptions.getInstance().getOption("forin"));
-	css.setSelected(JSLintOptions.getInstance().getOption("css"));
-	newcap.setSelected(JSLintOptions.getInstance().getOption("newcap"));
-	cap.setSelected(JSLintOptions.getInstance().getOption("cap"));
-	safe.setSelected(JSLintOptions.getInstance().getOption("safe"));
-	nomen.setSelected(JSLintOptions.getInstance().getOption("nomen"));
-	on.setSelected(JSLintOptions.getInstance().getOption("on"));
-	adsafe.setSelected(JSLintOptions.getInstance().getOption("adsafe"));
-	plusplus.setSelected(JSLintOptions.getInstance().getOption("plusplus"));
-	fragment.setSelected(JSLintOptions.getInstance().getOption("fragment"));
-	preDef.setText(JSLintOptions.getInstance().getOption("predef", ""));
+	devel.setSelected(JSHintOptions.getInstance().getOption("devel"));
+	bitwise.setSelected(JSHintOptions.getInstance().getOption("bitwise"));
+	regexp.setSelected(JSHintOptions.getInstance().getOption("regexp"));
+	browser.setSelected(JSHintOptions.getInstance().getOption("browser"));
+	confusion.setSelected(JSHintOptions.getInstance().getOption("confusion"));
+	undef.setSelected(JSHintOptions.getInstance().getOption("undef"));
+	node.setSelected(JSHintOptions.getInstance().getOption("node"));
+	tContinue.setSelected(JSHintOptions.getInstance().getOption("continue"));
+	unparam.setSelected(JSHintOptions.getInstance().getOption("unparam"));
+	rhino.setSelected(JSHintOptions.getInstance().getOption("rhino"));
+	debug.setSelected(JSHintOptions.getInstance().getOption("debug"));
+	sloppy.setSelected(JSHintOptions.getInstance().getOption("sloppy"));
+	widget.setSelected(JSHintOptions.getInstance().getOption("widget"));
+	eqeq.setSelected(JSHintOptions.getInstance().getOption("eqeq"));
+	sub.setSelected(JSHintOptions.getInstance().getOption("sub"));
+	windows.setSelected(JSHintOptions.getInstance().getOption("windows"));
+	es5.setSelected(JSHintOptions.getInstance().getOption("es5"));
+	vars.setSelected(JSHintOptions.getInstance().getOption("vars"));
+	evil.setSelected(JSHintOptions.getInstance().getOption("evil"));
+	white.setSelected(JSHintOptions.getInstance().getOption("white"));
+	passfail.setSelected(JSHintOptions.getInstance().getOption("passfail"));
+	forin.setSelected(JSHintOptions.getInstance().getOption("forin"));
+	css.setSelected(JSHintOptions.getInstance().getOption("css"));
+	newcap.setSelected(JSHintOptions.getInstance().getOption("newcap"));
+	cap.setSelected(JSHintOptions.getInstance().getOption("cap"));
+	safe.setSelected(JSHintOptions.getInstance().getOption("safe"));
+	nomen.setSelected(JSHintOptions.getInstance().getOption("nomen"));
+	on.setSelected(JSHintOptions.getInstance().getOption("on"));
+	adsafe.setSelected(JSHintOptions.getInstance().getOption("adsafe"));
+	plusplus.setSelected(JSHintOptions.getInstance().getOption("plusplus"));
+	fragment.setSelected(JSHintOptions.getInstance().getOption("fragment"));
+	preDef.setText(JSHintOptions.getInstance().getOption("predef", ""));
 	try {
-	    maxerr.setText(Integer.toString(JSLintOptions.getInstance().getOption("maxerr",50)));
-	    indent.setText(Integer.toString(JSLintOptions.getInstance().getOption("indent",4)));
-	    maxlen.setText(Integer.toString(JSLintOptions.getInstance().getOption("maxlen",0)));   
+	    maxerr.setText(Integer.toString(JSHintOptions.getInstance().getOption("maxerr",50)));
+	    indent.setText(Integer.toString(JSHintOptions.getInstance().getOption("indent",4)));
+	    maxlen.setText(Integer.toString(JSHintOptions.getInstance().getOption("maxlen",0)));   
 	} catch (NumberFormatException e) {
             e.printStackTrace();
         } 
     }
 
     void store() {
-	JSLintOptions.getInstance().setOption("adsafe", adsafe.isSelected());
-	JSLintOptions.getInstance().setOption("bitwise", bitwise.isSelected());
-	JSLintOptions.getInstance().setOption("browser", browser.isSelected());
-	JSLintOptions.getInstance().setOption("cap", cap.isSelected());
-	JSLintOptions.getInstance().setOption("confusion", confusion.isSelected());
-	JSLintOptions.getInstance().setOption("css", css.isSelected());
-	JSLintOptions.getInstance().setOption("debug", debug.isSelected());
-	JSLintOptions.getInstance().setOption("devel", devel.isSelected());
-	JSLintOptions.getInstance().setOption("eqeq", eqeq.isSelected());
-	JSLintOptions.getInstance().setOption("es5", es5.isSelected());
-	JSLintOptions.getInstance().setOption("evil", evil.isSelected());
-	JSLintOptions.getInstance().setOption("forin", forin.isSelected());
-	JSLintOptions.getInstance().setOption("fragment", fragment.isSelected());
-	JSLintOptions.getInstance().setOption("newcap", newcap.isSelected());
-	JSLintOptions.getInstance().setOption("node", node.isSelected());
-	JSLintOptions.getInstance().setOption("nomen", nomen.isSelected());
-	JSLintOptions.getInstance().setOption("on", on.isSelected());
-	JSLintOptions.getInstance().setOption("passfail", passfail.isSelected());
-	JSLintOptions.getInstance().setOption("plusplus", plusplus.isSelected());
-	JSLintOptions.getInstance().setOption("regexp", regexp.isSelected());
-	JSLintOptions.getInstance().setOption("rhino", rhino.isSelected());
-	JSLintOptions.getInstance().setOption("safe", safe.isSelected());
-	JSLintOptions.getInstance().setOption("sloppy", sloppy.isSelected());
-	JSLintOptions.getInstance().setOption("sub", sub.isSelected());
-	JSLintOptions.getInstance().setOption("continue", tContinue.isSelected());
-	JSLintOptions.getInstance().setOption("undef", undef.isSelected());
-	JSLintOptions.getInstance().setOption("unparam", unparam.isSelected());
-	JSLintOptions.getInstance().setOption("vars", vars.isSelected());
-	JSLintOptions.getInstance().setOption("white", white.isSelected());
-	JSLintOptions.getInstance().setOption("widget", widget.isSelected());
-	JSLintOptions.getInstance().setOption("windows", windows.isSelected());
-	JSLintOptions.getInstance().setOption("predef", preDef.getText());
+	JSHintOptions.getInstance().setOption("adsafe", adsafe.isSelected());
+	JSHintOptions.getInstance().setOption("bitwise", bitwise.isSelected());
+	JSHintOptions.getInstance().setOption("browser", browser.isSelected());
+	JSHintOptions.getInstance().setOption("cap", cap.isSelected());
+	JSHintOptions.getInstance().setOption("confusion", confusion.isSelected());
+	JSHintOptions.getInstance().setOption("css", css.isSelected());
+	JSHintOptions.getInstance().setOption("debug", debug.isSelected());
+	JSHintOptions.getInstance().setOption("devel", devel.isSelected());
+	JSHintOptions.getInstance().setOption("eqeq", eqeq.isSelected());
+	JSHintOptions.getInstance().setOption("es5", es5.isSelected());
+	JSHintOptions.getInstance().setOption("evil", evil.isSelected());
+	JSHintOptions.getInstance().setOption("forin", forin.isSelected());
+	JSHintOptions.getInstance().setOption("fragment", fragment.isSelected());
+	JSHintOptions.getInstance().setOption("newcap", newcap.isSelected());
+	JSHintOptions.getInstance().setOption("node", node.isSelected());
+	JSHintOptions.getInstance().setOption("nomen", nomen.isSelected());
+	JSHintOptions.getInstance().setOption("on", on.isSelected());
+	JSHintOptions.getInstance().setOption("passfail", passfail.isSelected());
+	JSHintOptions.getInstance().setOption("plusplus", plusplus.isSelected());
+	JSHintOptions.getInstance().setOption("regexp", regexp.isSelected());
+	JSHintOptions.getInstance().setOption("rhino", rhino.isSelected());
+	JSHintOptions.getInstance().setOption("safe", safe.isSelected());
+	JSHintOptions.getInstance().setOption("sloppy", sloppy.isSelected());
+	JSHintOptions.getInstance().setOption("sub", sub.isSelected());
+	JSHintOptions.getInstance().setOption("continue", tContinue.isSelected());
+	JSHintOptions.getInstance().setOption("undef", undef.isSelected());
+	JSHintOptions.getInstance().setOption("unparam", unparam.isSelected());
+	JSHintOptions.getInstance().setOption("vars", vars.isSelected());
+	JSHintOptions.getInstance().setOption("white", white.isSelected());
+	JSHintOptions.getInstance().setOption("widget", widget.isSelected());
+	JSHintOptions.getInstance().setOption("windows", windows.isSelected());
+	JSHintOptions.getInstance().setOption("predef", preDef.getText());
 	try {
-	    JSLintOptions.getInstance().setOption("maxerr", Integer.parseInt(maxerr.getText()));
-	    JSLintOptions.getInstance().setOption("indent", Integer.parseInt(indent.getText()));
-	    JSLintOptions.getInstance().setOption("maxlen", Integer.parseInt(maxlen.getText()));
+	    JSHintOptions.getInstance().setOption("maxerr", Integer.parseInt(maxerr.getText()));
+	    JSHintOptions.getInstance().setOption("indent", Integer.parseInt(indent.getText()));
+	    JSHintOptions.getInstance().setOption("maxlen", Integer.parseInt(maxlen.getText()));
 	} catch (NumberFormatException e) {
             e.printStackTrace();
         }
 	
-	//JSLintOptions.getInstance().getOptions();
-	JSLintOptions.getInstance().removeOptions();
+	//JSHintOptions.getInstance().getOptions();
+	JSHintOptions.getInstance().removeOptions();
     }
 
     boolean valid() {

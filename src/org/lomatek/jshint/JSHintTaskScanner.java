@@ -21,7 +21,7 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package org.lomatek.jslint;
+package org.lomatek.jshint;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -43,19 +43,19 @@ import javax.swing.text.StyledDocument;
  *
  * @author Stanislav Lomadurov 
  */
-public class JSLintTaskScanner extends FileTaskScanner {
+public class JSHintTaskScanner extends FileTaskScanner {
 
     private static final String GROUP_NAME = "logging-tasklist";
     private Callback callback = null;
 
-    public JSLintTaskScanner(String name, String desc) {
+    public JSHintTaskScanner(String name, String desc) {
 	super(name, desc, null);
     }
 
-    public static JSLintTaskScanner create() {
-	String name = org.openide.util.NbBundle.getBundle(JSLintTaskScanner.class).getString("LBL_task");
-	String desc = org.openide.util.NbBundle.getBundle(JSLintTaskScanner.class).getString("DESC_task");
-	return new JSLintTaskScanner(name, desc);
+    public static JSHintTaskScanner create() {
+	String name = org.openide.util.NbBundle.getBundle(JSHintTaskScanner.class).getString("LBL_task");
+	String desc = org.openide.util.NbBundle.getBundle(JSHintTaskScanner.class).getString("DESC_task");
+	return new JSHintTaskScanner(name, desc);
     }
 
     @Override
@@ -85,16 +85,16 @@ public class JSLintTaskScanner extends FileTaskScanner {
 	    } else {
 		text = getContent(file);
 	    }
-	    List<JSLintIssue> errors = JSLintRun.getInstance().run(text);
+	    List<JSHintIssue> errors = JSHintRun.getInstance().run(text);
 	    if (null != dObj) {
 		// Clear annotation list of Editor
-		JSLintIssueAnnotation.clear(dObj);
+		JSHintIssueAnnotation.clear(dObj);
 	    }
 	    if (errors.isEmpty())
 		return Collections.<Task>emptyList();
-	    for (JSLintIssue issue : errors) {
+	    for (JSHintIssue issue : errors) {
 		if (null != currentDocument) {
-		    JSLintIssueAnnotation.createAnnotation(dObj, cLine, issue.getReason(), issue.getLine(), issue.getCharacter(), issue.getLength());
+		    JSHintIssueAnnotation.createAnnotation(dObj, cLine, issue.getReason(), issue.getLine(), issue.getCharacter(), issue.getLength());
 		}
 		// Create new Task
 		Task task = Task.create(file, GROUP_NAME, issue.getReason(), issue.getLine());

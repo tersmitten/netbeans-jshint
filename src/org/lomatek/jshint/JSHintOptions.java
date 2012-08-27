@@ -21,7 +21,7 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package org.lomatek.jslint;
+package org.lomatek.jshint;
 
 import org.openide.util.NbPreferences;
 import org.mozilla.javascript.Context;
@@ -31,9 +31,9 @@ import org.mozilla.javascript.Scriptable;
  *
  * @author Stanislav Lomadurov <lord.rojer@gmail.com>
  */
-public class JSLintOptions {
+public class JSHintOptions {
     
-    private static JSLintOptions INSTANCE;
+    private static JSHintOptions INSTANCE;
     
     private static final String[] OPTIONS = {"devel", "bitwise", "regexp", 
 	"browser", "confusion", "undef", "node", "continue", "unparam", "rhino", 
@@ -43,41 +43,41 @@ public class JSLintOptions {
     private static String directive = null;
     private static Scriptable options = null;
     
-    public static JSLintOptions getInstance() {
+    public static JSHintOptions getInstance() {
 	    if (INSTANCE == null) {
-		    INSTANCE = new JSLintOptions();
+		    INSTANCE = new JSHintOptions();
 	    }
 
 	    return INSTANCE;
     }
     
-    private JSLintOptions() {}
+    private JSHintOptions() {}
     
     // Get option as boolean
     public boolean getOption(String key) {
-	return NbPreferences.forModule(JSLintOptions.class).getBoolean(key, false);
+	return NbPreferences.forModule(JSHintOptions.class).getBoolean(key, false);
     }
     // Get option as integer
     public int getOption(String key, int integer) {
-	return NbPreferences.forModule(JSLintOptions.class).getInt(key, integer);
+	return NbPreferences.forModule(JSHintOptions.class).getInt(key, integer);
     }
     // Get option as string
     public String getOption(String key, String str){
-        return NbPreferences.forModule(JSLintOptions.class).get(key, str);
+        return NbPreferences.forModule(JSHintOptions.class).get(key, str);
     }
     // Set option as boolean
     public void setOption(String key, boolean value) {
-	NbPreferences.forModule(JSLintOptions.class).putBoolean(key, value);
+	NbPreferences.forModule(JSHintOptions.class).putBoolean(key, value);
     }
     // Set option as integer
     public void setOption(String key, int value) {
-	NbPreferences.forModule(JSLintOptions.class).putInt(key, value);
+	NbPreferences.forModule(JSHintOptions.class).putInt(key, value);
     }
     // Set option as string
     public void setOption(String key, String value) {
-	NbPreferences.forModule(JSLintOptions.class).put(key, value);
+	NbPreferences.forModule(JSHintOptions.class).put(key, value);
     }
-    // Get the Rhino context contains options for JSLint
+    // Get the Rhino context contains options for JSHint
     public Scriptable getOptions(Context context, Scriptable scope){
 	if (null != options)
 	    return options;
@@ -112,7 +112,7 @@ public class JSLintOptions {
 	int i = 0;
 	if (null == directive) {
 	    StringBuilder str = new StringBuilder();
-	    str.append("/*jslint ");
+	    str.append("/*jshint ");
 	    for (String key : OPTIONS) {
 		str.append(key);
 		str.append(": ");

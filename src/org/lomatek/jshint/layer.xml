@@ -7,7 +7,7 @@
 	</folder>
 	
 	<folder name="AnnotationTypes">
-	    <file name="org-lomatek-jslint-JSLintErrorAnnotation.xml" url="JSLintErrorAnnotation.xml"/>
+	    <file name="org-lomatek-jshint-JSHintErrorAnnotation.xml" url="JSHintErrorAnnotation.xml"/>
 	</folder>
     </folder>
     <folder name="TaskList">
@@ -15,7 +15,7 @@
 	    <file name="logging.instance">
 		<attr name="instanceCreate" methodvalue="org.netbeans.spi.tasklist.Task.createGroup"/>
 		
-		<attr name="localizingBundle" stringvalue="org.lomatek.jslint.Bundle"/>
+		<attr name="localizingBundle" stringvalue="org.lomatek.jshint.Bundle"/>
 		<attr name="groupName" stringvalue="logging-tasklist"/>
 		<attr name="diplayNameKey" stringvalue="LBL_loggroup"/>
 		<attr name="descriptionKey" stringvalue="HINT_loggroup"/>
@@ -24,9 +24,9 @@
 	    </file>
 	</folder>
 	<folder name="Scanners">
-	    <file name="JSLintTaskScanner.instance">
+	    <file name="JSHintTaskScanner.instance">
 		<attr name="instanceOf" stringvalue="org.netbeans.spi.tasklist.FileTaskScanner"/>
-		<attr name="instanceCreate" methodvalue="org.lomatek.jslint.JSLintTaskScanner.create"/>
+		<attr name="instanceCreate" methodvalue="org.lomatek.jshint.JSHintTaskScanner.create"/>
 	    </file>
 	</folder>
     </folder>

@@ -21,7 +21,7 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package org.lomatek.jslint;
+package org.lomatek.jshint;
 
 import java.io.IOException;
 import java.util.List;
@@ -42,9 +42,9 @@ import org.openide.util.Exceptions;
  *
  * @author Stanislav Lomadurov <lord.rojer@gmail.com>
  */
-final public class JSLintRun {
+final public class JSHintRun {
 
-    private static JSLintRun instance;
+    private static JSHintRun instance;
     /**
      * Rhino context
      * @url https://developer.mozilla.org/En/Rhino_documentation/Scopes_and_Contexts
@@ -52,35 +52,35 @@ final public class JSLintRun {
     private Context context = null;
     private Scriptable scope = null;
 
-    JSLintRun() {
+    JSHintRun() {
     }
 
-    public static JSLintRun getInstance() {
+    public static JSHintRun getInstance() {
 	if (instance == null) {
-	    instance = new JSLintRun();
+	    instance = new JSHintRun();
 	}
 	return instance;
     }
 
-    public List<JSLintIssue> run(String contents) {
+    public List<JSHintIssue> run(String contents) {
 	init();
 	scope.put("contents", scope, contents);
 	// Get options
-	scope.put("opts", scope, JSLintOptions.getInstance().getOptions(context, scope));
-	context.evaluateString(scope, "results = JSLINT(contents, opts);", "JSLint", 1, null);
-	Scriptable lint = (Scriptable) scope.get("JSLINT", scope);
+	scope.put("opts", scope, JSHintOptions.getInstance().getOptions(context, scope));
+	context.evaluateString(scope, "results = JSHINT(contents, opts);", "JSHint", 1, null);
+	Scriptable lint = (Scriptable) scope.get("JSHINT", scope);
 	// Выходим из контекста
 	context.exit();
-	// Get JSLint errors
+	// Get JSHint errors
 	NativeArray errors = (NativeArray) lint.get("errors", null);
-	List<JSLintIssue> result = new ArrayList<JSLintIssue>();
+	List<JSHintIssue> result = new ArrayList<JSHintIssue>();
 	for (int i = 0; i < errors.getLength(); i++) {
 	    NativeObject error = (NativeObject) errors.get(i, null);
 	    if (null == error) {
 		continue;
 	    }
 	    // Add error
-	    result.add(new JSLintIssue(error));
+	    result.add(new JSHintIssue(error));
 	}
 	return result;
     }
@@ -92,9 +92,9 @@ final public class JSLintRun {
 
 	    if (null == scope) {
 		scope = context.initStandardObjects();
-		Reader reader = new BufferedReader(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("org/lomatek/jslint/resources/jslint.js"), Charset.forName("UTF-8")));
+		Reader reader = new BufferedReader(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("org/lomatek/jshint/resources/jshint.js"), Charset.forName("UTF-8")));
 
-		context.evaluateReader(scope, reader, "JSLint", 1, null);
+		context.evaluateReader(scope, reader, "JSHint", 1, null);
 	    }
 	} catch (IOException ex) {
 	    Exceptions.printStackTrace(ex);

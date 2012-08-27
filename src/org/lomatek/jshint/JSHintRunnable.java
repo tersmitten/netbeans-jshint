@@ -21,42 +21,31 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package org.lomatek.jslint;
+package org.lomatek.jshint;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import org.openide.ErrorManager;
+import org.openide.filesystems.FileObject;
 import org.openide.loaders.DataObject;
-
-import org.openide.awt.ActionRegistration;
-import org.openide.awt.ActionReference;
-import org.openide.awt.ActionReferences;
-import org.openide.awt.ActionID;
-
-import org.openide.util.RequestProcessor;
-
-@ActionID(category = "Build",
-id = "org.lomatek.jslint.JSLintSample")
-@ActionRegistration(displayName = "#CTL_JSLintAction")
-@ActionReferences({
-    @ActionReference(path = "Editors/text/javascript/Popup", position = 400, separatorAfter = 450)
-})
-//@Messages("CTL_JSLintSample=JSLintSample")
-public final class JSLintAction implements ActionListener {
+/**
+ *
+ * @author Stanislav Lomadurov
+ */
+public class JSHintRunnable implements Runnable {
+    static final String EXECUTABLE_KEY = "jshintExecutable";
+    private final DataObject nodeData;
     
-    static RequestProcessor processor = null;
-
-    private final DataObject context;
-
-    public JSLintAction(DataObject context) {
-	this.context = context;
+    public JSHintRunnable(DataObject nodeData, String commandLineArgs) {
+	this.nodeData = nodeData;
     }
-
+    
     @Override
-    public void actionPerformed(ActionEvent ev) {
-	// Start JSLintRunnable
-	if (processor == null) {
-            processor = new RequestProcessor("JSLintErrorCheck", 1, true);
+    public void run() {
+	try {
+	    // Init JSHint TaskScanner
+	    FileObject fileObject = nodeData.getPrimaryFile();
+	    JSHintTaskScanner.create().scan(fileObject);
+	} catch (Exception ex) {
+            ErrorManager.getDefault().notify(ErrorManager.WARNING, ex);
         }
-        processor.post(new JSLintRunnable(context, "-e"));
     }
 }

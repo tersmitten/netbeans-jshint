@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.lomatek.jslint;
+package org.lomatek.jshint;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -22,7 +22,7 @@ import org.openide.text.Line;
  *
  * @author LORD
  */
-public class JSLintIssueAnnotation extends Annotation {
+public class JSHintIssueAnnotation extends Annotation {
     //private static List<Annotation> annotations = new ArrayList<Annotation>();
     private static Map<DataObject, List<Annotation>> annotations = new HashMap<DataObject, List<Annotation>>();
 
@@ -30,14 +30,14 @@ public class JSLintIssueAnnotation extends Annotation {
     private String reason;
     private int character;
 
-    public static JSLintIssueAnnotation create(DataObject dObj, int character, String reason) {
-        JSLintIssueAnnotation annotation = new JSLintIssueAnnotation(character, reason);
+    public static JSHintIssueAnnotation create(DataObject dObj, int character, String reason) {
+        JSHintIssueAnnotation annotation = new JSHintIssueAnnotation(character, reason);
         //annotations.add(annotation);
 	getAnnotationList(dObj).add(annotation);
         return annotation;
     }
     
-    private JSLintIssueAnnotation(int character, String reason) {
+    private JSHintIssueAnnotation(int character, String reason) {
         this.reason = reason;
         this.character = character;
     }
@@ -56,7 +56,7 @@ public class JSLintIssueAnnotation extends Annotation {
 	getAnnotationList(dObj).clear();
     }
 
-    public static void remove(DataObject dObj, JSLintIssueAnnotation annotation) {
+    public static void remove(DataObject dObj, JSHintIssueAnnotation annotation) {
         //annotations.remove(annotation);
 	getAnnotationList(dObj).remove(annotation);
     }
@@ -68,7 +68,7 @@ public class JSLintIssueAnnotation extends Annotation {
      */
     @Override
     public String getAnnotationType() {
-        return "org-lomatek-jslint-jslinterrorannotation";
+        return "org-lomatek-jshint-jshinterrorannotation";
     }
 
     /** Provide the Tidy error message as a description.
@@ -86,7 +86,7 @@ public class JSLintIssueAnnotation extends Annotation {
         try {
 	    Line currentLine = cLine.getLineSet().getCurrent(line-1);
 	    final Line.Part currentPartLine = currentLine.createPart(character - 1, length);
-            final JSLintIssueAnnotation annotation = JSLintIssueAnnotation.create(dObj, character, reason);
+            final JSHintIssueAnnotation annotation = JSHintIssueAnnotation.create(dObj, character, reason);
 	    
             annotation.attach(currentPartLine);
 	    
@@ -100,7 +100,7 @@ public class JSLintIssueAnnotation extends Annotation {
                         currentPartLine.removePropertyChangeListener(this);
                         annotation.detach();
 			//annotation.
-                        JSLintIssueAnnotation.remove(dObj, annotation);
+                        JSHintIssueAnnotation.remove(dObj, annotation);
                     }
                 }
             });

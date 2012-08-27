@@ -21,7 +21,7 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package org.lomatek.jslint;
+package org.lomatek.jshint;
 
 import org.mozilla.javascript.Scriptable;
 
@@ -29,7 +29,7 @@ import org.mozilla.javascript.Scriptable;
  *
  * @author Stanislav Lomadurov <lord.rojer@gmail.com>
  */
-public class JSLintIssue {
+public class JSHintIssue {
     
     private final int line;
     private final int character;
@@ -38,7 +38,7 @@ public class JSLintIssue {
     private final String b;
     private final int length;
     
-    public JSLintIssue(Scriptable error) {
+    public JSHintIssue(Scriptable error) {
 	line = ((Number) error.get("line", null)).intValue();
 	character = ((Number) error.get("character", null)).intValue();
 	reason = objectToString("reason", error);

@@ -21,7 +21,7 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package org.lomatek.jslint.ui;
+package org.lomatek.jshint.ui;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -31,12 +31,12 @@ import org.openide.util.HelpCtx;
 import org.openide.util.Lookup;
 
 @OptionsPanelController.SubRegistration(location = "Advanced",
-displayName = "#AdvancedOption_DisplayName_JSLint",
-keywords = "#AdvancedOption_Keywords_JSLint",
-keywordsCategory = "Advanced/JSLint")
-public final class JSLintOptionsPanelController extends OptionsPanelController {
+displayName = "#AdvancedOption_DisplayName_JSHint",
+keywords = "#AdvancedOption_Keywords_JSHint",
+keywordsCategory = "Advanced/JSHint")
+public final class JSHintOptionsPanelController extends OptionsPanelController {
 
-    private JSLintPanel panel;
+    private JSHintPanel panel;
     private final PropertyChangeSupport pcs = new PropertyChangeSupport(this);
     private boolean changed;
 
@@ -87,9 +87,9 @@ public final class JSLintOptionsPanelController extends OptionsPanelController {
 	pcs.removePropertyChangeListener(l);
     }
 
-    private JSLintPanel getPanel() {
+    private JSHintPanel getPanel() {
 	if (panel == null) {
-	    panel = new JSLintPanel(this);
+	    panel = new JSHintPanel(this);
 	}
 	return panel;
     }
