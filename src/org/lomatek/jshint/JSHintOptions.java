@@ -35,11 +35,16 @@ public class JSHintOptions {
     
     private static JSHintOptions INSTANCE;
     
-    private static final String[] OPTIONS = {"devel", "bitwise", "regexp", 
-	"browser", "confusion", "undef", "node", "continue", "unparam", "rhino", 
-	"debug", "sloppy", "widget", "eqeq", "sub", "windows", "es5", "vars", 
-	"evil", "white", "passfail", "forin", "css", "newcap", "cap", "safe", 
-	"nomen", "on", "adsafe", "plusplus", "fragment"};
+    private static final String[] OPTIONS = {"asi", "bitwise", "boss", 
+        "browser", "camelcase", "couch", "curly", "debug", "devel", "dojo", 
+        "eqeqeq", "eqnull", "es5", "esnext", "evil", "expr", "forin", 
+        "funcscope", "globalstrict", "immed", "iterator", "jquery", "lastsemic", 
+        "latedef", "laxbreak", "laxcomma", "loopfunc", "mootools", "multistr", 
+        "newcap", "noarg", "node", "noempty", "nonew", "nonstandard", "nomen", 
+        "onevar", "onecase", "passfail", "plusplus", "proto", "prototypejs", 
+        "regexdash", "regexp", "rhino", "undef", "unused", "scripturl", 
+        "shadow", "smarttabs", "strict", "sub", "supernew", "trailing", 
+        "validthis", "withstmt", "white", "worker", "wsh"};
     private static String directive = null;
     private static Scriptable options = null;
     
@@ -79,8 +84,9 @@ public class JSHintOptions {
     }
     // Get the Rhino context contains options for JSHint
     public Scriptable getOptions(Context context, Scriptable scope){
-	if (null != options)
-	    return options;
+	if (null != options) {
+            return options;
+        }
 	options = context.newObject(scope);
 	for (String key : OPTIONS) {
 	    options.put(key, options, getOption(key));
@@ -91,8 +97,9 @@ public class JSHintOptions {
 	    options.put("predef", options, new NativeArray(opts));
 	}
 	// Maximum line length
-	if (0 != getOption("maxlen", 0 ))
-	    options.put("maxlen", options, getOption("maxlen", 0 ));
+	if (0 != getOption("maxlen", 0 )) {
+            options.put("maxlen", options, getOption("maxlen", 0 ));
+        }
 	// Maximum number of errors
 	options.put("maxerr", options, getOption("maxerr", 50 ));
 	// Indentation
@@ -116,20 +123,22 @@ public class JSHintOptions {
 	    for (String key : OPTIONS) {
 		str.append(key);
 		str.append(": ");
-		if (getOption(key)) 
-		    str.append("true, ");
-		else
-		    str.append("false, ");
+		if (getOption(key)) {
+                    str.append("true, ");
+                } else {
+                    str.append("false, ");
+                }
 	    }
 	    if (!"".equals(getOption("predef", ""))) {
 		str.append("predef:[");
 		str.append(getOption("predef", ""));
 		str.append("]");
 	    }
-	    if (0 != getOption("maxlen", 0))
-		str.append("maxlen: ")
-			.append(getOption("maxlen", 0 ))
-			.append(", ");
+	    if (0 != getOption("maxlen", 0)) {
+                str.append("maxlen: ")
+                        .append(getOption("maxlen", 0 ))
+                        .append(", ");
+            }
 	    str.append("maxerr: ")
 		    .append(getOption("maxerr", 50))
 		    .append(",  indent: ")

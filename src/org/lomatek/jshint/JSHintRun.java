@@ -69,8 +69,8 @@ final public class JSHintRun {
 	scope.put("opts", scope, JSHintOptions.getInstance().getOptions(context, scope));
 	context.evaluateString(scope, "results = JSHINT(contents, opts);", "JSHint", 1, null);
 	Scriptable lint = (Scriptable) scope.get("JSHINT", scope);
-	// Выходим из контекста
-	context.exit();
+	// We leave out of context
+	Context.exit();
 	// Get JSHint errors
 	NativeArray errors = (NativeArray) lint.get("errors", null);
 	List<JSHintIssue> result = new ArrayList<JSHintIssue>();

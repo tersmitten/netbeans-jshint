@@ -23,8 +23,6 @@
  */
 package org.lomatek.jshint.ui;
 
-import com.sun.java.swing.plaf.windows.resources.windows;
-import javax.swing.JPanel;
 import org.lomatek.jshint.JSHintOptions;
 
 final class JSHintPanel extends javax.swing.JPanel {
@@ -465,7 +463,8 @@ final class JSHintPanel extends javax.swing.JPanel {
 	    indent.setText(Integer.toString(JSHintOptions.getInstance().getOption("indent",4)));
 	    maxlen.setText(Integer.toString(JSHintOptions.getInstance().getOption("maxlen",0)));   
 	} catch (NumberFormatException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new RuntimeException(e);
         } 
     }
 
@@ -507,7 +506,8 @@ final class JSHintPanel extends javax.swing.JPanel {
 	    JSHintOptions.getInstance().setOption("indent", Integer.parseInt(indent.getText()));
 	    JSHintOptions.getInstance().setOption("maxlen", Integer.parseInt(maxlen.getText()));
 	} catch (NumberFormatException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new RuntimeException(e);
         }
 	
 	//JSHintOptions.getInstance().getOptions();

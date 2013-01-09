@@ -38,6 +38,7 @@ import org.openide.cookies.EditorCookie;
 import org.openide.cookies.LineCookie;
 import org.openide.loaders.DataObject;
 import javax.swing.text.StyledDocument;
+import org.openide.util.NbBundle;
 
 /**
  *
@@ -53,16 +54,17 @@ public class JSHintTaskScanner extends FileTaskScanner {
     }
 
     public static JSHintTaskScanner create() {
-	String name = org.openide.util.NbBundle.getBundle(JSHintTaskScanner.class).getString("LBL_task");
-	String desc = org.openide.util.NbBundle.getBundle(JSHintTaskScanner.class).getString("DESC_task");
+	String name = NbBundle.getMessage(JSHintTaskScanner.class, "LBL_task");
+	String desc = NbBundle.getMessage(JSHintTaskScanner.class, "DESC_task");
 	return new JSHintTaskScanner(name, desc);
     }
 
     @Override
     public List<? extends Task> scan(FileObject file) {
 	// Ignore not JS file
-	if ( null == file || file.isFolder() || ! "JS".equals(file.getExt().toUpperCase()))
-	    return Collections.<Task>emptyList();
+	if ( null == file || file.isFolder() || ! "JS".equals(file.getExt().toUpperCase())) {
+            return Collections.<Task>emptyList();
+        }
 
 	List<Task> tasks = new ArrayList<Task>();
 	try {
@@ -73,8 +75,8 @@ public class JSHintTaskScanner extends FileTaskScanner {
 	    LineCookie cLine = null;
 	    StyledDocument currentDocument = null;
 	    if (null != dObj) {
-		EditorCookie cEditor = dObj.getCookie(EditorCookie.class);
-		cLine = dObj.getCookie(LineCookie.class);
+		EditorCookie cEditor = dObj.getLookup().lookup(EditorCookie.class);
+		cLine = dObj.getLookup().lookup(LineCookie.class);
 		currentDocument = cEditor.getDocument();
 		// Get text
 		if (null != currentDocument) {
@@ -90,8 +92,9 @@ public class JSHintTaskScanner extends FileTaskScanner {
 		// Clear annotation list of Editor
 		JSHintIssueAnnotation.clear(dObj);
 	    }
-	    if (errors.isEmpty())
-		return Collections.<Task>emptyList();
+	    if (errors.isEmpty()) {
+                return Collections.<Task>emptyList();
+            }
 	    for (JSHintIssue issue : errors) {
 		if (null != currentDocument) {
 		    JSHintIssueAnnotation.createAnnotation(dObj, cLine, issue.getReason(), issue.getLine(), issue.getCharacter(), issue.getLength());
