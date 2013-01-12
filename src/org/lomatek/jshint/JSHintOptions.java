@@ -44,16 +44,16 @@ public class JSHintOptions {
         "onevar", "onecase", "passfail", "plusplus", "proto", "prototypejs", 
         "regexdash", "regexp", "rhino", "undef", "unused", "scripturl", 
         "shadow", "smarttabs", "strict", "sub", "supernew", "trailing", 
-        "validthis", "withstmt", "white", "worker", "wsh"};
+        "validthis", "withstmt", "white", "worker", "wsh", "yui"};
     private static String directive = null;
     private static Scriptable options = null;
     
     public static JSHintOptions getInstance() {
-	    if (INSTANCE == null) {
-		    INSTANCE = new JSHintOptions();
-	    }
+        if (INSTANCE == null) {
+            INSTANCE = new JSHintOptions();
+        }
 
-	    return INSTANCE;
+        return INSTANCE;
     }
     
     private JSHintOptions() {}

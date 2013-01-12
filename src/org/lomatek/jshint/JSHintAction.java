@@ -34,8 +34,7 @@ import org.openide.awt.ActionID;
 
 import org.openide.util.RequestProcessor;
 
-@ActionID(category = "Build",
-id = "org.lomatek.jshint.JSHintSample")
+@ActionID(category = "Build", id = "org.lomatek.jshint.JSHintSample")
 @ActionRegistration(displayName = "#CTL_JSHintAction")
 @ActionReferences({
     @ActionReference(path = "Editors/text/javascript/Popup", position = 400, separatorAfter = 450)

@@ -43,154 +43,657 @@ final class JSHintPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        devel = new javax.swing.JCheckBox();
-        browser = new javax.swing.JCheckBox();
-        node = new javax.swing.JCheckBox();
-        rhino = new javax.swing.JCheckBox();
-        widget = new javax.swing.JCheckBox();
-        windows = new javax.swing.JCheckBox();
-        passfail = new javax.swing.JCheckBox();
-        safe = new javax.swing.JCheckBox();
-        adsafe = new javax.swing.JCheckBox();
+        OptionsScroll = new javax.swing.JScrollPane();
+        Options = new javax.swing.JPanel();
+        Enforcing = new javax.swing.JPanel();
+        EnforcingLabel = new javax.swing.JLabel();
         bitwise = new javax.swing.JCheckBox();
-        newcap = new javax.swing.JCheckBox();
-        confusion = new javax.swing.JCheckBox();
-        tContinue = new javax.swing.JCheckBox();
-        debug = new javax.swing.JCheckBox();
+        camelcase = new javax.swing.JCheckBox();
+        curly = new javax.swing.JCheckBox();
         eqeq = new javax.swing.JCheckBox();
-        es5 = new javax.swing.JCheckBox();
-        evil = new javax.swing.JCheckBox();
         forin = new javax.swing.JCheckBox();
-        nomen = new javax.swing.JCheckBox();
+        immed = new javax.swing.JCheckBox();
+        latedef = new javax.swing.JCheckBox();
+        newcap = new javax.swing.JCheckBox();
+        noarg = new javax.swing.JCheckBox();
+        noempty = new javax.swing.JCheckBox();
+        nonew = new javax.swing.JCheckBox();
         plusplus = new javax.swing.JCheckBox();
         regexp = new javax.swing.JCheckBox();
         undef = new javax.swing.JCheckBox();
-        unparam = new javax.swing.JCheckBox();
-        sloppy = new javax.swing.JCheckBox();
+        unused = new javax.swing.JCheckBox();
+        strict = new javax.swing.JCheckBox();
+        trailing = new javax.swing.JCheckBox();
+        Relaxing = new javax.swing.JPanel();
+        RelaxingLabel = new javax.swing.JLabel();
+        asi = new javax.swing.JCheckBox();
+        boss = new javax.swing.JCheckBox();
+        debug = new javax.swing.JCheckBox();
+        eqnull = new javax.swing.JCheckBox();
+        es5 = new javax.swing.JCheckBox();
+        esnext = new javax.swing.JCheckBox();
+        evil = new javax.swing.JCheckBox();
+        expr = new javax.swing.JCheckBox();
+        funcscope = new javax.swing.JCheckBox();
+        globalstrict = new javax.swing.JCheckBox();
+        iterator = new javax.swing.JCheckBox();
+        lastsemic = new javax.swing.JCheckBox();
+        laxbreak = new javax.swing.JCheckBox();
+        laxcomma = new javax.swing.JCheckBox();
+        loopfunc = new javax.swing.JCheckBox();
+        multistr = new javax.swing.JCheckBox();
+        onecase = new javax.swing.JCheckBox();
+        proto = new javax.swing.JCheckBox();
+        redexdash = new javax.swing.JCheckBox();
+        scripturl = new javax.swing.JCheckBox();
+        smarttabs = new javax.swing.JCheckBox();
+        shadow = new javax.swing.JCheckBox();
         sub = new javax.swing.JCheckBox();
-        vars = new javax.swing.JCheckBox();
+        supernew = new javax.swing.JCheckBox();
+        Environments = new javax.swing.JPanel();
+        EnviromentsLabel = new javax.swing.JLabel();
+        browser = new javax.swing.JCheckBox();
+        couch = new javax.swing.JCheckBox();
+        devel = new javax.swing.JCheckBox();
+        dojo = new javax.swing.JCheckBox();
+        jquery = new javax.swing.JCheckBox();
+        mootools = new javax.swing.JCheckBox();
+        node = new javax.swing.JCheckBox();
+        nonstandard = new javax.swing.JCheckBox();
+        prototypejs = new javax.swing.JCheckBox();
+        rhino = new javax.swing.JCheckBox();
+        worker = new javax.swing.JCheckBox();
+        wsh = new javax.swing.JCheckBox();
+        yui = new javax.swing.JCheckBox();
+        Legacy = new javax.swing.JPanel();
+        LegacyLabel = new javax.swing.JLabel();
+        nomen = new javax.swing.JCheckBox();
+        onevar = new javax.swing.JCheckBox();
+        passfail = new javax.swing.JCheckBox();
         white = new javax.swing.JCheckBox();
-        css = new javax.swing.JCheckBox();
-        cap = new javax.swing.JCheckBox();
-        on = new javax.swing.JCheckBox();
-        fragment = new javax.swing.JCheckBox();
-        jSeparator1 = new javax.swing.JSeparator();
-        jUnselectAll = new javax.swing.JButton();
-        jSelectAll = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        Separator1 = new javax.swing.JSeparator();
+        SelectAll = new javax.swing.JButton();
+        UnselectAll = new javax.swing.JButton();
+        Extra = new javax.swing.JPanel();
         indent = new javax.swing.JTextField();
+        indentLabel = new javax.swing.JLabel();
         maxlen = new javax.swing.JTextField();
+        maxlenLabel = new javax.swing.JLabel();
         maxerr = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        preDef = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
+        maxerrLabel = new javax.swing.JLabel();
+        Prefedined = new javax.swing.JPanel();
+        predefLabel = new javax.swing.JLabel();
+        predefScroll = new javax.swing.JScrollPane();
+        predef = new javax.swing.JTextArea();
+
+        EnforcingLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        EnforcingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        org.openide.awt.Mnemonics.setLocalizedText(EnforcingLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.EnforcingLabel.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(bitwise, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.text")); // NOI18N
+        bitwise.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.toolTipText")); // NOI18N
+        bitwise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bitwiseActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(camelcase, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.camelcase.text")); // NOI18N
+        camelcase.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.camelcase.toolTipText")); // NOI18N
+        camelcase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                camelcaseActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(curly, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.curly.text")); // NOI18N
+        curly.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.curly.toolTipText")); // NOI18N
+        curly.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                curlyActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(eqeq, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.eqeq.text")); // NOI18N
+        eqeq.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.eqeq.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(forin, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.forin.text")); // NOI18N
+        forin.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.forin.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(immed, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.immed.text")); // NOI18N
+        immed.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.immed.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(latedef, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.latedef.text")); // NOI18N
+        latedef.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.latedef.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(newcap, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.newcap.text")); // NOI18N
+        newcap.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.newcap.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(noarg, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.noarg.text")); // NOI18N
+        noarg.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.noarg.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(noempty, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.noempty.text")); // NOI18N
+        noempty.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.noempty.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(nonew, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nonew.text")); // NOI18N
+        nonew.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nonew.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(plusplus, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.plusplus.text")); // NOI18N
+        plusplus.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.plusplus.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(regexp, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.regexp.text")); // NOI18N
+        regexp.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.regexp.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(undef, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.undef.text")); // NOI18N
+        undef.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.undef.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(unused, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.unused.text")); // NOI18N
+        unused.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.unused.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(strict, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.strict.text")); // NOI18N
+        strict.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.strict.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(trailing, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.trailing.text")); // NOI18N
+        trailing.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.trailing.toolTipText")); // NOI18N
+
+        javax.swing.GroupLayout EnforcingLayout = new javax.swing.GroupLayout(Enforcing);
+        Enforcing.setLayout(EnforcingLayout);
+        EnforcingLayout.setHorizontalGroup(
+            EnforcingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EnforcingLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(EnforcingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(EnforcingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(EnforcingLayout.createSequentialGroup()
+                        .addGroup(EnforcingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(curly)
+                            .addComponent(bitwise)
+                            .addComponent(eqeq)
+                            .addComponent(forin)
+                            .addComponent(regexp)
+                            .addComponent(undef)
+                            .addComponent(camelcase)
+                            .addComponent(newcap)
+                            .addComponent(plusplus)
+                            .addComponent(noempty)
+                            .addComponent(nonew)
+                            .addComponent(latedef)
+                            .addComponent(noarg)
+                            .addComponent(immed)
+                            .addComponent(unused)
+                            .addComponent(strict)
+                            .addComponent(trailing))
+                        .addContainerGap())))
+        );
+        EnforcingLayout.setVerticalGroup(
+            EnforcingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EnforcingLayout.createSequentialGroup()
+                .addComponent(EnforcingLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bitwise)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(camelcase)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(curly)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(eqeq)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(forin)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(immed)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(latedef)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(newcap)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(noarg)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(noempty)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nonew)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(plusplus)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(regexp)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(undef)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(unused)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(strict)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(trailing)
+                .addContainerGap())
+        );
+
+        RelaxingLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        RelaxingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        org.openide.awt.Mnemonics.setLocalizedText(RelaxingLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.RelaxingLabel.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(asi, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.asi.text")); // NOI18N
+        asi.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.asi.toolTipText")); // NOI18N
+        asi.setName("devel"); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(boss, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.boss.text")); // NOI18N
+        boss.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.boss.toolTipText")); // NOI18N
+        boss.setName("devel"); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(debug, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.debug.text")); // NOI18N
+        debug.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.debug.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(eqnull, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.eqnull.text")); // NOI18N
+        eqnull.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.eqnull.toolTipText")); // NOI18N
+        eqnull.setName("devel"); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(es5, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.es5.text")); // NOI18N
+        es5.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.es5.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(esnext, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.esnext.text")); // NOI18N
+        esnext.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.esnext.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(evil, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.evil.text")); // NOI18N
+        evil.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.evil.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(expr, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.expr.text")); // NOI18N
+        expr.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.expr.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(funcscope, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.funcscope.text")); // NOI18N
+        funcscope.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.funcscope.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(globalstrict, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.globalstrict.text")); // NOI18N
+        globalstrict.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.globalstrict.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(iterator, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.iterator.text")); // NOI18N
+        iterator.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.iterator.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(lastsemic, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.lastsemic.text")); // NOI18N
+        lastsemic.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.lastsemic.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(laxbreak, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.laxbreak.text")); // NOI18N
+        laxbreak.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.laxbreak.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(laxcomma, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.laxcomma.text")); // NOI18N
+        laxcomma.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.laxcomma.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(loopfunc, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.loopfunc.text")); // NOI18N
+        loopfunc.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.loopfunc.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(multistr, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.multistr.text")); // NOI18N
+        multistr.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.multistr.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(onecase, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.onecase.text")); // NOI18N
+        onecase.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.onecase.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(proto, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.proto.text")); // NOI18N
+        proto.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.proto.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(redexdash, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.redexdash.text")); // NOI18N
+        redexdash.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.redexdash.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(scripturl, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.scripturl.text")); // NOI18N
+        scripturl.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.scripturl.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(smarttabs, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.smarttabs.text")); // NOI18N
+        smarttabs.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.smarttabs.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(shadow, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.shadow.text")); // NOI18N
+        shadow.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.shadow.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(sub, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.sub.text")); // NOI18N
+        sub.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.sub.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(supernew, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.supernew.text")); // NOI18N
+        supernew.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.supernew.toolTipText")); // NOI18N
+
+        javax.swing.GroupLayout RelaxingLayout = new javax.swing.GroupLayout(Relaxing);
+        Relaxing.setLayout(RelaxingLayout);
+        RelaxingLayout.setHorizontalGroup(
+            RelaxingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RelaxingLayout.createSequentialGroup()
+                .addGroup(RelaxingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(iterator)
+                    .addComponent(globalstrict)
+                    .addComponent(funcscope)
+                    .addComponent(evil)
+                    .addComponent(es5)
+                    .addComponent(debug)
+                    .addComponent(laxcomma)
+                    .addComponent(loopfunc)
+                    .addComponent(lastsemic)
+                    .addComponent(laxbreak)
+                    .addComponent(boss)
+                    .addComponent(eqnull)
+                    .addComponent(multistr)
+                    .addComponent(esnext)
+                    .addComponent(onecase)
+                    .addComponent(expr)
+                    .addComponent(proto)
+                    .addComponent(redexdash)
+                    .addComponent(asi)
+                    .addComponent(supernew)
+                    .addComponent(sub)
+                    .addComponent(shadow)
+                    .addComponent(smarttabs)
+                    .addComponent(scripturl)
+                    .addComponent(RelaxingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        RelaxingLayout.setVerticalGroup(
+            RelaxingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RelaxingLayout.createSequentialGroup()
+                .addComponent(RelaxingLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(asi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(boss)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(debug)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(eqnull)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(es5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(esnext)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(evil)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(expr)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(funcscope)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(globalstrict)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(iterator)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lastsemic)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(laxbreak)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(laxcomma)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(loopfunc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(multistr)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(onecase)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(proto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(redexdash)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scripturl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(smarttabs)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shadow)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sub)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(supernew)
+                .addContainerGap())
+        );
+
+        EnviromentsLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        EnviromentsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        org.openide.awt.Mnemonics.setLocalizedText(EnviromentsLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.EnviromentsLabel.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(browser, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.browser.text")); // NOI18N
+        browser.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.browser.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(couch, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.couch.text")); // NOI18N
+        couch.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.couch.toolTipText")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(devel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.devel.text")); // NOI18N
         devel.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.devel.toolTipText")); // NOI18N
         devel.setName("devel"); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(browser, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.browser.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(dojo, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.dojo.text")); // NOI18N
+        dojo.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.dojo.toolTipText")); // NOI18N
+        dojo.setName("devel"); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jquery, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jquery.text")); // NOI18N
+        jquery.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jquery.toolTipText")); // NOI18N
+        jquery.setName("devel"); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(mootools, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.mootools.text")); // NOI18N
+        mootools.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.mootools.toolTipText")); // NOI18N
+        mootools.setName("devel"); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(node, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.node.text")); // NOI18N
+        node.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.node.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(nonstandard, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nonstandard.text")); // NOI18N
+        nonstandard.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nonstandard.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(prototypejs, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.prototypejs.text")); // NOI18N
+        prototypejs.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.prototypejs.toolTipText")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(rhino, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.rhino.text")); // NOI18N
+        rhino.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.rhino.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(widget, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.widget.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(worker, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.worker.text")); // NOI18N
+        worker.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.worker.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(windows, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.windows.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(wsh, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.wsh.text")); // NOI18N
+        wsh.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.wsh.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(passfail, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.passfail.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(yui, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.yui.text")); // NOI18N
+        yui.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.yui.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(safe, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.safe.text")); // NOI18N
+        javax.swing.GroupLayout EnvironmentsLayout = new javax.swing.GroupLayout(Environments);
+        Environments.setLayout(EnvironmentsLayout);
+        EnvironmentsLayout.setHorizontalGroup(
+            EnvironmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jquery)
+            .addComponent(mootools)
+            .addComponent(node)
+            .addComponent(nonstandard)
+            .addComponent(prototypejs)
+            .addComponent(rhino)
+            .addComponent(worker)
+            .addComponent(wsh)
+            .addComponent(yui)
+            .addComponent(browser)
+            .addComponent(couch)
+            .addComponent(devel)
+            .addComponent(dojo)
+            .addComponent(EnviromentsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        EnvironmentsLayout.setVerticalGroup(
+            EnvironmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EnvironmentsLayout.createSequentialGroup()
+                .addComponent(EnviromentsLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(browser)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(couch)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(devel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dojo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jquery)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mootools)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(node)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nonstandard)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(prototypejs)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(rhino)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(worker)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(wsh)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(yui)
+                .addContainerGap())
+        );
 
-        org.openide.awt.Mnemonics.setLocalizedText(adsafe, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.adsafe.text")); // NOI18N
-        adsafe.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.adsafe.toolTipText")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(bitwise, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(newcap, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.newcap.text")); // NOI18N
-        newcap.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.newcap.toolTipText")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(confusion, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.confusion.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(tContinue, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.tContinue.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(debug, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.debug.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(eqeq, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.eqeq.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(es5, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.es5.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(evil, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.evil.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(forin, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.forin.text")); // NOI18N
+        LegacyLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        LegacyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        org.openide.awt.Mnemonics.setLocalizedText(LegacyLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.LegacyLabel.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(nomen, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nomen.text")); // NOI18N
+        nomen.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nomen.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(plusplus, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.plusplus.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(onevar, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.onevar.text")); // NOI18N
+        onevar.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.onevar.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(regexp, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.regexp.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(undef, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.undef.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(unparam, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.unparam.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(sloppy, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.sloppy.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(sub, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.sub.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(vars, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.vars.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(passfail, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.passfail.text")); // NOI18N
+        passfail.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.passfail.toolTipText")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(white, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.white.text")); // NOI18N
+        white.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.white.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(css, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.css.text")); // NOI18N
+        javax.swing.GroupLayout LegacyLayout = new javax.swing.GroupLayout(Legacy);
+        Legacy.setLayout(LegacyLayout);
+        LegacyLayout.setHorizontalGroup(
+            LegacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(nomen)
+            .addComponent(onevar)
+            .addComponent(passfail)
+            .addComponent(white)
+            .addComponent(LegacyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        LegacyLayout.setVerticalGroup(
+            LegacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LegacyLayout.createSequentialGroup()
+                .addComponent(LegacyLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomen)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(onevar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(passfail)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(white)
+                .addContainerGap())
+        );
 
-        org.openide.awt.Mnemonics.setLocalizedText(cap, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.cap.text")); // NOI18N
-        cap.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.cap.toolTipText")); // NOI18N
+        javax.swing.GroupLayout OptionsLayout = new javax.swing.GroupLayout(Options);
+        Options.setLayout(OptionsLayout);
+        OptionsLayout.setHorizontalGroup(
+            OptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(OptionsLayout.createSequentialGroup()
+                .addComponent(Enforcing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Relaxing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Environments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Legacy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+        OptionsLayout.setVerticalGroup(
+            OptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Relaxing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Enforcing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Legacy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Environments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
-        org.openide.awt.Mnemonics.setLocalizedText(on, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.on.text")); // NOI18N
+        OptionsScroll.setViewportView(Options);
 
-        org.openide.awt.Mnemonics.setLocalizedText(fragment, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.fragment.text")); // NOI18N
-        fragment.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.fragment.toolTipText")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jUnselectAll, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jUnselectAll.text")); // NOI18N
-        jUnselectAll.addActionListener(new java.awt.event.ActionListener() {
+        org.openide.awt.Mnemonics.setLocalizedText(SelectAll, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.SelectAll.text")); // NOI18N
+        SelectAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jUnselectAllActionPerformed(evt);
+                SelectAllActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jSelectAll, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jSelectAll.text")); // NOI18N
-        jSelectAll.addActionListener(new java.awt.event.ActionListener() {
+        org.openide.awt.Mnemonics.setLocalizedText(UnselectAll, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.UnselectAll.text")); // NOI18N
+        UnselectAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jSelectAllActionPerformed(evt);
+                UnselectAllActionPerformed(evt);
             }
         });
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jLabel1.text")); // NOI18N
 
         indent.setText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.indent.text")); // NOI18N
+        indent.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.indentLabel.toolTipText")); // NOI18N
         indent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 indentActionPerformed(evt);
             }
         });
 
+        org.openide.awt.Mnemonics.setLocalizedText(indentLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.indentLabel.text")); // NOI18N
+        indentLabel.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.indentLabel.toolTipText")); // NOI18N
+
         maxlen.setText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxlen.text")); // NOI18N
+        maxlen.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxlen.toolTipText")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(maxlenLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxlenLabel.text")); // NOI18N
+        maxlenLabel.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxlenLabel.toolTipText")); // NOI18N
 
         maxerr.setText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxerr.text")); // NOI18N
+        maxerr.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxerr.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(maxerrLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxerrLabel.text")); // NOI18N
+        maxerrLabel.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.maxerrLabel.toolTipText")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jLabel3.text")); // NOI18N
+        javax.swing.GroupLayout ExtraLayout = new javax.swing.GroupLayout(Extra);
+        Extra.setLayout(ExtraLayout);
+        ExtraLayout.setHorizontalGroup(
+            ExtraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ExtraLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(ExtraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(maxerr)
+                    .addComponent(maxlen, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(indent, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGap(4, 4, 4)
+                .addGroup(ExtraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(indentLabel)
+                    .addComponent(maxlenLabel)
+                    .addComponent(maxerrLabel))
+                .addContainerGap())
+        );
+        ExtraLayout.setVerticalGroup(
+            ExtraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ExtraLayout.createSequentialGroup()
+                .addGroup(ExtraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(indent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(indentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ExtraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(maxlen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maxlenLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ExtraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(maxerr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maxerrLabel))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
-        preDef.setColumns(20);
-        preDef.setRows(5);
-        jScrollPane1.setViewportView(preDef);
+        org.openide.awt.Mnemonics.setLocalizedText(predefLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.predefLabel.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.jLabel4.text")); // NOI18N
+        predef.setColumns(20);
+        predef.setRows(5);
+        predefScroll.setViewportView(predef);
+
+        javax.swing.GroupLayout PrefedinedLayout = new javax.swing.GroupLayout(Prefedined);
+        Prefedined.setLayout(PrefedinedLayout);
+        PrefedinedLayout.setHorizontalGroup(
+            PrefedinedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PrefedinedLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PrefedinedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(predefScroll)
+                    .addGroup(PrefedinedLayout.createSequentialGroup()
+                        .addComponent(predefLabel)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        PrefedinedLayout.setVerticalGroup(
+            PrefedinedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PrefedinedLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(predefLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(predefScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -200,156 +703,39 @@ final class JSHintPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jUnselectAll)
+                        .addComponent(SelectAll)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSelectAll))
+                        .addComponent(UnselectAll)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(OptionsScroll, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Separator1))
+                        .addGap(14, 14, 14))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(maxerr, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(maxlen, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(indent, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addGap(51, 51, 51)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
-                            .addComponent(jLabel4)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(browser)
-                            .addComponent(devel)
-                            .addComponent(node)
-                            .addComponent(rhino)
-                            .addComponent(widget)
-                            .addComponent(windows)
-                            .addComponent(passfail)
-                            .addComponent(safe)
-                            .addComponent(adsafe))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(plusplus)
-                            .addComponent(nomen)
-                            .addComponent(newcap)
-                            .addComponent(confusion)
-                            .addComponent(bitwise)
-                            .addComponent(tContinue)
-                            .addComponent(debug)
-                            .addComponent(eqeq)
-                            .addComponent(es5)
-                            .addComponent(evil)
-                            .addComponent(forin))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fragment)
-                            .addComponent(on)
-                            .addComponent(cap)
-                            .addComponent(undef)
-                            .addComponent(regexp)
-                            .addComponent(unparam)
-                            .addComponent(sloppy)
-                            .addComponent(sub)
-                            .addComponent(vars)
-                            .addComponent(white)
-                            .addComponent(css)))
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 632, Short.MAX_VALUE))
-                .addGap(14, 14, 14))
+                        .addComponent(Extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Prefedined, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(OptionsScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(regexp)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(undef)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(unparam)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sloppy)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(sub)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(vars)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(white)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(css)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cap)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(on)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(fragment))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(bitwise)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(confusion)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tContinue)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(debug)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(eqeq)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(es5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(evil)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(forin)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(newcap))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(devel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(browser)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(node)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rhino)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(widget)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(windows)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(passfail)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(safe)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(adsafe)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nomen)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(plusplus)))
+                    .addComponent(UnselectAll)
+                    .addComponent(SelectAll))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jUnselectAll)
-                    .addComponent(jSelectAll))
-                .addGap(16, 16, 16)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(indent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel4))
+                .addComponent(Separator1, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(maxlen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(maxerr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(Extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0))
+                    .addComponent(Prefedined, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -357,107 +743,200 @@ final class JSHintPanel extends javax.swing.JPanel {
 	// TODO add your handling code here:
     }//GEN-LAST:event_indentActionPerformed
 
-    private void jUnselectAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUnselectAllActionPerformed
-	devel.setSelected(false);
-	bitwise.setSelected(false);
-	regexp.setSelected(false);
-	browser.setSelected(false);
-	confusion.setSelected(false);
-	undef.setSelected(false);
-	node.setSelected(false);
-	tContinue.setSelected(false);
-	unparam.setSelected(false);
-	rhino.setSelected(false);
-	debug.setSelected(false);
-	sloppy.setSelected(false);
-	widget.setSelected(false);
-	eqeq.setSelected(false);
-	sub.setSelected(false);
-	windows.setSelected(false);
-	es5.setSelected(false);
-	vars.setSelected(false);
-	evil.setSelected(false);
-	white.setSelected(false);
-	passfail.setSelected(false);
-	forin.setSelected(false);
-	css.setSelected(false);
-	newcap.setSelected(false);
-	cap.setSelected(false);
-	safe.setSelected(false);
-	nomen.setSelected(false);
-	on.setSelected(false);
-	adsafe.setSelected(false);
-	plusplus.setSelected(false);
-	fragment.setSelected(false);
-    }//GEN-LAST:event_jUnselectAllActionPerformed
+    private void UnselectAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnselectAllActionPerformed
+        asi.setSelected(false);
+        bitwise.setSelected(false);
+        boss.setSelected(false);
+        browser.setSelected(false);
+        camelcase.setSelected(false);
+        couch.setSelected(false);
+        curly.setSelected(false);
+        debug.setSelected(false);
+        devel.setSelected(false);
+        dojo.setSelected(false);
+        eqeq.setSelected(false);
+        eqnull.setSelected(false);
+        es5.setSelected(false);
+        esnext.setSelected(false);
+        evil.setSelected(false);
+        expr.setSelected(false);
+        forin.setSelected(false);
+        funcscope.setSelected(false);
+        globalstrict.setSelected(false);
+        immed.setSelected(false);
+        iterator.setSelected(false);
+        jquery.setSelected(false);
+        lastsemic.setSelected(false);
+        latedef.setSelected(false);
+        laxbreak.setSelected(false);
+        laxcomma.setSelected(false);
+        loopfunc.setSelected(false);
+        mootools.setSelected(false);
+        multistr.setSelected(false);
+        newcap.setSelected(false);
+        noarg.setSelected(false);
+        node.setSelected(false);
+        noempty.setSelected(false);
+        nomen.setSelected(false);
+        nonew.setSelected(false);
+        nonstandard.setSelected(false);
+        onecase.setSelected(false);
+        onevar.setSelected(false);
+        passfail.setSelected(false);
+        plusplus.setSelected(false);
+        proto.setSelected(false);
+        prototypejs.setSelected(false);
+        redexdash.setSelected(false);
+        regexp.setSelected(false);
+        rhino.setSelected(false);
+        scripturl.setSelected(false);
+        shadow.setSelected(false);
+        smarttabs.setSelected(false);
+        strict.setSelected(false);
+        sub.setSelected(false);
+        supernew.setSelected(false);
+        trailing.setSelected(false);
+        undef.setSelected(false);
+        unused.setSelected(false);
+        white.setSelected(false);
+        worker.setSelected(false);
+        wsh.setSelected(false);
+        yui.setSelected(false);
+    }//GEN-LAST:event_UnselectAllActionPerformed
 
-    private void jSelectAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSelectAllActionPerformed
-	devel.setSelected(true);
-	bitwise.setSelected(true);
-	regexp.setSelected(true);
-	browser.setSelected(true);
-	confusion.setSelected(true);
-	undef.setSelected(true);
-	node.setSelected(true);
-	tContinue.setSelected(true);
-	unparam.setSelected(true);
-	rhino.setSelected(true);
-	debug.setSelected(true);
-	sloppy.setSelected(true);
-	widget.setSelected(true);
-	eqeq.setSelected(true);
-	sub.setSelected(true);
-	windows.setSelected(true);
-	es5.setSelected(true);
-	vars.setSelected(true);
-	evil.setSelected(true);
-	white.setSelected(true);
-	passfail.setSelected(true);
-	forin.setSelected(true);
-	css.setSelected(true);
-	newcap.setSelected(true);
-	cap.setSelected(true);
-	safe.setSelected(true);
-	nomen.setSelected(true);
-	on.setSelected(true);
-	adsafe.setSelected(true);
-	plusplus.setSelected(true);
-	fragment.setSelected(true);
-    }//GEN-LAST:event_jSelectAllActionPerformed
+    private void SelectAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectAllActionPerformed
+        asi.setSelected(true);
+        bitwise.setSelected(true);
+        boss.setSelected(true);
+        browser.setSelected(true);
+        camelcase.setSelected(true);
+        couch.setSelected(true);
+        curly.setSelected(true);
+        debug.setSelected(true);
+        devel.setSelected(true);
+        dojo.setSelected(true);
+        eqeq.setSelected(true);
+        eqnull.setSelected(true);
+        es5.setSelected(true);
+        esnext.setSelected(true);
+        evil.setSelected(true);
+        expr.setSelected(true);
+        forin.setSelected(true);
+        funcscope.setSelected(true);
+        globalstrict.setSelected(true);
+        immed.setSelected(true);
+        iterator.setSelected(true);
+        jquery.setSelected(true);
+        lastsemic.setSelected(true);
+        latedef.setSelected(true);
+        laxbreak.setSelected(true);
+        laxcomma.setSelected(true);
+        loopfunc.setSelected(true);
+        mootools.setSelected(true);
+        multistr.setSelected(true);
+        newcap.setSelected(true);
+        noarg.setSelected(true);
+        node.setSelected(true);
+        noempty.setSelected(true);
+        nomen.setSelected(true);
+        nonew.setSelected(true);
+        nonstandard.setSelected(true);
+        onecase.setSelected(true);
+        onevar.setSelected(true);
+        passfail.setSelected(true);
+        plusplus.setSelected(true);
+        proto.setSelected(true);
+        prototypejs.setSelected(true);
+        redexdash.setSelected(true);
+        regexp.setSelected(true);
+        rhino.setSelected(true);
+        scripturl.setSelected(true);
+        shadow.setSelected(true);
+        smarttabs.setSelected(true);
+        strict.setSelected(true);
+        sub.setSelected(true);
+        supernew.setSelected(true);
+        trailing.setSelected(true);
+        undef.setSelected(true);
+        unused.setSelected(true);
+        white.setSelected(true);
+        worker.setSelected(true);
+        wsh.setSelected(true);
+        yui.setSelected(true);
+    }//GEN-LAST:event_SelectAllActionPerformed
+
+    private void camelcaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_camelcaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_camelcaseActionPerformed
+
+    private void curlyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_curlyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_curlyActionPerformed
+
+    private void bitwiseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bitwiseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bitwiseActionPerformed
 
     void load() {
-	devel.setSelected(JSHintOptions.getInstance().getOption("devel"));
-	bitwise.setSelected(JSHintOptions.getInstance().getOption("bitwise"));
-	regexp.setSelected(JSHintOptions.getInstance().getOption("regexp"));
-	browser.setSelected(JSHintOptions.getInstance().getOption("browser"));
-	confusion.setSelected(JSHintOptions.getInstance().getOption("confusion"));
-	undef.setSelected(JSHintOptions.getInstance().getOption("undef"));
-	node.setSelected(JSHintOptions.getInstance().getOption("node"));
-	tContinue.setSelected(JSHintOptions.getInstance().getOption("continue"));
-	unparam.setSelected(JSHintOptions.getInstance().getOption("unparam"));
-	rhino.setSelected(JSHintOptions.getInstance().getOption("rhino"));
-	debug.setSelected(JSHintOptions.getInstance().getOption("debug"));
-	sloppy.setSelected(JSHintOptions.getInstance().getOption("sloppy"));
-	widget.setSelected(JSHintOptions.getInstance().getOption("widget"));
-	eqeq.setSelected(JSHintOptions.getInstance().getOption("eqeq"));
-	sub.setSelected(JSHintOptions.getInstance().getOption("sub"));
-	windows.setSelected(JSHintOptions.getInstance().getOption("windows"));
-	es5.setSelected(JSHintOptions.getInstance().getOption("es5"));
-	vars.setSelected(JSHintOptions.getInstance().getOption("vars"));
-	evil.setSelected(JSHintOptions.getInstance().getOption("evil"));
-	white.setSelected(JSHintOptions.getInstance().getOption("white"));
-	passfail.setSelected(JSHintOptions.getInstance().getOption("passfail"));
-	forin.setSelected(JSHintOptions.getInstance().getOption("forin"));
-	css.setSelected(JSHintOptions.getInstance().getOption("css"));
-	newcap.setSelected(JSHintOptions.getInstance().getOption("newcap"));
-	cap.setSelected(JSHintOptions.getInstance().getOption("cap"));
-	safe.setSelected(JSHintOptions.getInstance().getOption("safe"));
-	nomen.setSelected(JSHintOptions.getInstance().getOption("nomen"));
-	on.setSelected(JSHintOptions.getInstance().getOption("on"));
-	adsafe.setSelected(JSHintOptions.getInstance().getOption("adsafe"));
-	plusplus.setSelected(JSHintOptions.getInstance().getOption("plusplus"));
-	fragment.setSelected(JSHintOptions.getInstance().getOption("fragment"));
-	preDef.setText(JSHintOptions.getInstance().getOption("predef", ""));
+        asi.setSelected(JSHintOptions.getInstance().getOption("asi"));
+        bitwise.setSelected(JSHintOptions.getInstance().getOption("bitwise"));
+        boss.setSelected(JSHintOptions.getInstance().getOption("boss"));
+        browser.setSelected(JSHintOptions.getInstance().getOption("browser"));
+        camelcase.setSelected(JSHintOptions.getInstance().getOption("camelcase"));
+        couch.setSelected(JSHintOptions.getInstance().getOption("couch"));
+        curly.setSelected(JSHintOptions.getInstance().getOption("curly"));
+        debug.setSelected(JSHintOptions.getInstance().getOption("debug"));
+        devel.setSelected(JSHintOptions.getInstance().getOption("devel"));
+        dojo.setSelected(JSHintOptions.getInstance().getOption("dojo"));
+        eqeq.setSelected(JSHintOptions.getInstance().getOption("eqeq"));
+        eqnull.setSelected(JSHintOptions.getInstance().getOption("eqnull"));
+        es5.setSelected(JSHintOptions.getInstance().getOption("es5"));
+        esnext.setSelected(JSHintOptions.getInstance().getOption("esnext"));
+        evil.setSelected(JSHintOptions.getInstance().getOption("evil"));
+        expr.setSelected(JSHintOptions.getInstance().getOption("expr"));
+        forin.setSelected(JSHintOptions.getInstance().getOption("forin"));
+        funcscope.setSelected(JSHintOptions.getInstance().getOption("funcscope"));
+        globalstrict.setSelected(JSHintOptions.getInstance().getOption("globalstrict"));
+        immed.setSelected(JSHintOptions.getInstance().getOption("immed"));
+        iterator.setSelected(JSHintOptions.getInstance().getOption("iterator"));
+        jquery.setSelected(JSHintOptions.getInstance().getOption("jquery"));
+        lastsemic.setSelected(JSHintOptions.getInstance().getOption("lastsemic"));
+        latedef.setSelected(JSHintOptions.getInstance().getOption("latedef"));
+        laxbreak.setSelected(JSHintOptions.getInstance().getOption("laxbreak"));
+        laxcomma.setSelected(JSHintOptions.getInstance().getOption("laxcomma"));
+        loopfunc.setSelected(JSHintOptions.getInstance().getOption("loopfunc"));
+        mootools.setSelected(JSHintOptions.getInstance().getOption("mootools"));
+        multistr.setSelected(JSHintOptions.getInstance().getOption("multistr"));
+        newcap.setSelected(JSHintOptions.getInstance().getOption("newcap"));
+        noarg.setSelected(JSHintOptions.getInstance().getOption("noarg"));
+        node.setSelected(JSHintOptions.getInstance().getOption("node"));
+        noempty.setSelected(JSHintOptions.getInstance().getOption("noempty"));
+        nomen.setSelected(JSHintOptions.getInstance().getOption("nomen"));
+        nonew.setSelected(JSHintOptions.getInstance().getOption("nonew"));
+        nonstandard.setSelected(JSHintOptions.getInstance().getOption("nonstandard"));
+        onecase.setSelected(JSHintOptions.getInstance().getOption("onecase"));
+        onevar.setSelected(JSHintOptions.getInstance().getOption("onevar"));
+        passfail.setSelected(JSHintOptions.getInstance().getOption("passfail"));
+        plusplus.setSelected(JSHintOptions.getInstance().getOption("plusplus"));
+        proto.setSelected(JSHintOptions.getInstance().getOption("proto"));
+        prototypejs.setSelected(JSHintOptions.getInstance().getOption("prototypejs"));
+        redexdash.setSelected(JSHintOptions.getInstance().getOption("redexdash"));
+        regexp.setSelected(JSHintOptions.getInstance().getOption("regexp"));
+        rhino.setSelected(JSHintOptions.getInstance().getOption("rhino"));
+        scripturl.setSelected(JSHintOptions.getInstance().getOption("scripturl"));
+        shadow.setSelected(JSHintOptions.getInstance().getOption("shadow"));
+        smarttabs.setSelected(JSHintOptions.getInstance().getOption("smarttabs"));
+        strict.setSelected(JSHintOptions.getInstance().getOption("strict"));
+        sub.setSelected(JSHintOptions.getInstance().getOption("sub"));
+        supernew.setSelected(JSHintOptions.getInstance().getOption("supernew"));
+        trailing.setSelected(JSHintOptions.getInstance().getOption("trailing"));
+        undef.setSelected(JSHintOptions.getInstance().getOption("undef"));
+        unused.setSelected(JSHintOptions.getInstance().getOption("unused"));
+        white.setSelected(JSHintOptions.getInstance().getOption("white"));
+        worker.setSelected(JSHintOptions.getInstance().getOption("worker"));
+        wsh.setSelected(JSHintOptions.getInstance().getOption("wsh"));
+        yui.setSelected(JSHintOptions.getInstance().getOption("yui"));
+	predef.setText(JSHintOptions.getInstance().getOption("predef", ""));
 	try {
 	    maxerr.setText(Integer.toString(JSHintOptions.getInstance().getOption("maxerr",50)));
 	    indent.setText(Integer.toString(JSHintOptions.getInstance().getOption("indent",4)));
@@ -469,38 +948,65 @@ final class JSHintPanel extends javax.swing.JPanel {
     }
 
     void store() {
-	JSHintOptions.getInstance().setOption("adsafe", adsafe.isSelected());
-	JSHintOptions.getInstance().setOption("bitwise", bitwise.isSelected());
-	JSHintOptions.getInstance().setOption("browser", browser.isSelected());
-	JSHintOptions.getInstance().setOption("cap", cap.isSelected());
-	JSHintOptions.getInstance().setOption("confusion", confusion.isSelected());
-	JSHintOptions.getInstance().setOption("css", css.isSelected());
-	JSHintOptions.getInstance().setOption("debug", debug.isSelected());
-	JSHintOptions.getInstance().setOption("devel", devel.isSelected());
-	JSHintOptions.getInstance().setOption("eqeq", eqeq.isSelected());
-	JSHintOptions.getInstance().setOption("es5", es5.isSelected());
-	JSHintOptions.getInstance().setOption("evil", evil.isSelected());
-	JSHintOptions.getInstance().setOption("forin", forin.isSelected());
-	JSHintOptions.getInstance().setOption("fragment", fragment.isSelected());
-	JSHintOptions.getInstance().setOption("newcap", newcap.isSelected());
-	JSHintOptions.getInstance().setOption("node", node.isSelected());
-	JSHintOptions.getInstance().setOption("nomen", nomen.isSelected());
-	JSHintOptions.getInstance().setOption("on", on.isSelected());
-	JSHintOptions.getInstance().setOption("passfail", passfail.isSelected());
-	JSHintOptions.getInstance().setOption("plusplus", plusplus.isSelected());
-	JSHintOptions.getInstance().setOption("regexp", regexp.isSelected());
-	JSHintOptions.getInstance().setOption("rhino", rhino.isSelected());
-	JSHintOptions.getInstance().setOption("safe", safe.isSelected());
-	JSHintOptions.getInstance().setOption("sloppy", sloppy.isSelected());
-	JSHintOptions.getInstance().setOption("sub", sub.isSelected());
-	JSHintOptions.getInstance().setOption("continue", tContinue.isSelected());
-	JSHintOptions.getInstance().setOption("undef", undef.isSelected());
-	JSHintOptions.getInstance().setOption("unparam", unparam.isSelected());
-	JSHintOptions.getInstance().setOption("vars", vars.isSelected());
-	JSHintOptions.getInstance().setOption("white", white.isSelected());
-	JSHintOptions.getInstance().setOption("widget", widget.isSelected());
-	JSHintOptions.getInstance().setOption("windows", windows.isSelected());
-	JSHintOptions.getInstance().setOption("predef", preDef.getText());
+        JSHintOptions.getInstance().setOption("asi", asi.isSelected());
+        JSHintOptions.getInstance().setOption("bitwise", bitwise.isSelected());
+        JSHintOptions.getInstance().setOption("boss", boss.isSelected());
+        JSHintOptions.getInstance().setOption("browser", browser.isSelected());
+        JSHintOptions.getInstance().setOption("camelcase", camelcase.isSelected());
+        JSHintOptions.getInstance().setOption("couch", couch.isSelected());
+        JSHintOptions.getInstance().setOption("curly", curly.isSelected());
+        JSHintOptions.getInstance().setOption("debug", debug.isSelected());
+        JSHintOptions.getInstance().setOption("devel", devel.isSelected());
+        JSHintOptions.getInstance().setOption("dojo", dojo.isSelected());
+        JSHintOptions.getInstance().setOption("eqeq", eqeq.isSelected());
+        JSHintOptions.getInstance().setOption("eqnull", eqnull.isSelected());
+        JSHintOptions.getInstance().setOption("es5", es5.isSelected());
+        JSHintOptions.getInstance().setOption("esnext", esnext.isSelected());
+        JSHintOptions.getInstance().setOption("evil", evil.isSelected());
+        JSHintOptions.getInstance().setOption("expr", expr.isSelected());
+        JSHintOptions.getInstance().setOption("forin", forin.isSelected());
+        JSHintOptions.getInstance().setOption("funcscope", funcscope.isSelected());
+        JSHintOptions.getInstance().setOption("globalstrict", globalstrict.isSelected());
+        JSHintOptions.getInstance().setOption("immed", immed.isSelected());
+        JSHintOptions.getInstance().setOption("iterator", iterator.isSelected());
+        JSHintOptions.getInstance().setOption("jquery", jquery.isSelected());
+        JSHintOptions.getInstance().setOption("lastsemic", lastsemic.isSelected());
+        JSHintOptions.getInstance().setOption("latedef", latedef.isSelected());
+        JSHintOptions.getInstance().setOption("laxbreak", laxbreak.isSelected());
+        JSHintOptions.getInstance().setOption("laxcomma", laxcomma.isSelected());
+        JSHintOptions.getInstance().setOption("loopfunc", loopfunc.isSelected());
+        JSHintOptions.getInstance().setOption("mootools", mootools.isSelected());
+        JSHintOptions.getInstance().setOption("multistr", multistr.isSelected());
+        JSHintOptions.getInstance().setOption("newcap", newcap.isSelected());
+        JSHintOptions.getInstance().setOption("noarg", noarg.isSelected());
+        JSHintOptions.getInstance().setOption("node", node.isSelected());
+        JSHintOptions.getInstance().setOption("noempty", noempty.isSelected());
+        JSHintOptions.getInstance().setOption("nomen", nomen.isSelected());
+        JSHintOptions.getInstance().setOption("nonew", nonew.isSelected());
+        JSHintOptions.getInstance().setOption("nonstandard", nonstandard.isSelected());
+        JSHintOptions.getInstance().setOption("onecase", onecase.isSelected());
+        JSHintOptions.getInstance().setOption("onevar", onevar.isSelected());
+        JSHintOptions.getInstance().setOption("passfail", passfail.isSelected());
+        JSHintOptions.getInstance().setOption("plusplus", plusplus.isSelected());
+        JSHintOptions.getInstance().setOption("proto", proto.isSelected());
+        JSHintOptions.getInstance().setOption("prototypejs", prototypejs.isSelected());
+        JSHintOptions.getInstance().setOption("redexdash", redexdash.isSelected());
+        JSHintOptions.getInstance().setOption("regexp", regexp.isSelected());
+        JSHintOptions.getInstance().setOption("rhino", rhino.isSelected());
+        JSHintOptions.getInstance().setOption("scripturl", scripturl.isSelected());
+        JSHintOptions.getInstance().setOption("shadow", shadow.isSelected());
+        JSHintOptions.getInstance().setOption("smarttabs", smarttabs.isSelected());
+        JSHintOptions.getInstance().setOption("strict", strict.isSelected());
+        JSHintOptions.getInstance().setOption("sub", sub.isSelected());
+        JSHintOptions.getInstance().setOption("supernew", supernew.isSelected());
+        JSHintOptions.getInstance().setOption("trailing", trailing.isSelected());
+        JSHintOptions.getInstance().setOption("undef", undef.isSelected());
+        JSHintOptions.getInstance().setOption("unused", unused.isSelected());
+        JSHintOptions.getInstance().setOption("white", white.isSelected());
+        JSHintOptions.getInstance().setOption("worker", worker.isSelected());
+        JSHintOptions.getInstance().setOption("wsh", wsh.isSelected());
+        JSHintOptions.getInstance().setOption("yui", yui.isSelected());
+	JSHintOptions.getInstance().setOption("predef", predef.getText());
 	try {
 	    JSHintOptions.getInstance().setOption("maxerr", Integer.parseInt(maxerr.getText()));
 	    JSHintOptions.getInstance().setOption("indent", Integer.parseInt(indent.getText()));
@@ -519,48 +1025,87 @@ final class JSHintPanel extends javax.swing.JPanel {
 	return true;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox adsafe;
+    private javax.swing.JPanel Enforcing;
+    private javax.swing.JLabel EnforcingLabel;
+    private javax.swing.JLabel EnviromentsLabel;
+    private javax.swing.JPanel Environments;
+    private javax.swing.JPanel Extra;
+    private javax.swing.JPanel Legacy;
+    private javax.swing.JLabel LegacyLabel;
+    private javax.swing.JPanel Options;
+    private javax.swing.JScrollPane OptionsScroll;
+    private javax.swing.JPanel Prefedined;
+    private javax.swing.JPanel Relaxing;
+    private javax.swing.JLabel RelaxingLabel;
+    private javax.swing.JButton SelectAll;
+    private javax.swing.JSeparator Separator1;
+    private javax.swing.JButton UnselectAll;
+    private javax.swing.JCheckBox asi;
     private javax.swing.JCheckBox bitwise;
+    private javax.swing.JCheckBox boss;
     private javax.swing.JCheckBox browser;
-    private javax.swing.JCheckBox cap;
-    private javax.swing.JCheckBox confusion;
-    private javax.swing.JCheckBox css;
+    private javax.swing.JCheckBox camelcase;
+    private javax.swing.JCheckBox couch;
+    private javax.swing.JCheckBox curly;
     private javax.swing.JCheckBox debug;
     private javax.swing.JCheckBox devel;
+    private javax.swing.JCheckBox dojo;
     private javax.swing.JCheckBox eqeq;
+    private javax.swing.JCheckBox eqnull;
     private javax.swing.JCheckBox es5;
+    private javax.swing.JCheckBox esnext;
     private javax.swing.JCheckBox evil;
+    private javax.swing.JCheckBox expr;
     private javax.swing.JCheckBox forin;
-    private javax.swing.JCheckBox fragment;
+    private javax.swing.JCheckBox funcscope;
+    private javax.swing.JCheckBox globalstrict;
+    private javax.swing.JCheckBox immed;
     private javax.swing.JTextField indent;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton jSelectAll;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JButton jUnselectAll;
+    private javax.swing.JLabel indentLabel;
+    private javax.swing.JCheckBox iterator;
+    private javax.swing.JCheckBox jquery;
+    private javax.swing.JCheckBox lastsemic;
+    private javax.swing.JCheckBox latedef;
+    private javax.swing.JCheckBox laxbreak;
+    private javax.swing.JCheckBox laxcomma;
+    private javax.swing.JCheckBox loopfunc;
     private javax.swing.JTextField maxerr;
+    private javax.swing.JLabel maxerrLabel;
     private javax.swing.JTextField maxlen;
+    private javax.swing.JLabel maxlenLabel;
+    private javax.swing.JCheckBox mootools;
+    private javax.swing.JCheckBox multistr;
     private javax.swing.JCheckBox newcap;
+    private javax.swing.JCheckBox noarg;
     private javax.swing.JCheckBox node;
+    private javax.swing.JCheckBox noempty;
     private javax.swing.JCheckBox nomen;
-    private javax.swing.JCheckBox on;
+    private javax.swing.JCheckBox nonew;
+    private javax.swing.JCheckBox nonstandard;
+    private javax.swing.JCheckBox onecase;
+    private javax.swing.JCheckBox onevar;
     private javax.swing.JCheckBox passfail;
     private javax.swing.JCheckBox plusplus;
-    private javax.swing.JTextArea preDef;
+    private javax.swing.JTextArea predef;
+    private javax.swing.JLabel predefLabel;
+    private javax.swing.JScrollPane predefScroll;
+    private javax.swing.JCheckBox proto;
+    private javax.swing.JCheckBox prototypejs;
+    private javax.swing.JCheckBox redexdash;
     private javax.swing.JCheckBox regexp;
     private javax.swing.JCheckBox rhino;
-    private javax.swing.JCheckBox safe;
-    private javax.swing.JCheckBox sloppy;
+    private javax.swing.JCheckBox scripturl;
+    private javax.swing.JCheckBox shadow;
+    private javax.swing.JCheckBox smarttabs;
+    private javax.swing.JCheckBox strict;
     private javax.swing.JCheckBox sub;
-    private javax.swing.JCheckBox tContinue;
+    private javax.swing.JCheckBox supernew;
+    private javax.swing.JCheckBox trailing;
     private javax.swing.JCheckBox undef;
-    private javax.swing.JCheckBox unparam;
-    private javax.swing.JCheckBox vars;
+    private javax.swing.JCheckBox unused;
     private javax.swing.JCheckBox white;
-    private javax.swing.JCheckBox widget;
-    private javax.swing.JCheckBox windows;
+    private javax.swing.JCheckBox worker;
+    private javax.swing.JCheckBox wsh;
+    private javax.swing.JCheckBox yui;
     // End of variables declaration//GEN-END:variables
 }
