@@ -127,6 +127,7 @@ final class JSHintPanel extends javax.swing.JPanel {
 
         TabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
+        bitwise.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(bitwise, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.text")); // NOI18N
         bitwise.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.toolTipText")); // NOI18N
         bitwise.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +144,7 @@ final class JSHintPanel extends javax.swing.JPanel {
             }
         });
 
+        curly.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(curly, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.curly.text")); // NOI18N
         curly.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.curly.toolTipText")); // NOI18N
         curly.addActionListener(new java.awt.event.ActionListener() {
@@ -151,9 +153,11 @@ final class JSHintPanel extends javax.swing.JPanel {
             }
         });
 
+        eqeq.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(eqeq, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.eqeq.text")); // NOI18N
         eqeq.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.eqeq.toolTipText")); // NOI18N
 
+        forin.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(forin, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.forin.text")); // NOI18N
         forin.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.forin.toolTipText")); // NOI18N
 
@@ -166,12 +170,15 @@ final class JSHintPanel extends javax.swing.JPanel {
         org.openide.awt.Mnemonics.setLocalizedText(newcap, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.newcap.text")); // NOI18N
         newcap.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.newcap.toolTipText")); // NOI18N
 
+        noarg.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(noarg, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.noarg.text")); // NOI18N
         noarg.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.noarg.toolTipText")); // NOI18N
 
+        noempty.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(noempty, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.noempty.text")); // NOI18N
         noempty.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.noempty.toolTipText")); // NOI18N
 
+        nonew.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(nonew, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nonew.text")); // NOI18N
         nonew.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nonew.toolTipText")); // NOI18N
 
@@ -181,12 +188,15 @@ final class JSHintPanel extends javax.swing.JPanel {
         org.openide.awt.Mnemonics.setLocalizedText(regexp, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.regexp.text")); // NOI18N
         regexp.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.regexp.toolTipText")); // NOI18N
 
+        undef.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(undef, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.undef.text")); // NOI18N
         undef.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.undef.toolTipText")); // NOI18N
 
+        unused.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(unused, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.unused.text")); // NOI18N
         unused.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.unused.toolTipText")); // NOI18N
 
+        strict.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(strict, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.strict.text")); // NOI18N
         strict.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.strict.toolTipText")); // NOI18N
 
@@ -419,8 +429,14 @@ final class JSHintPanel extends javax.swing.JPanel {
 
         TabbedPane.addTab(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.OptionsScroll2.TabConstraints.tabTitle"), OptionsScroll2); // NOI18N
 
+        browser.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(browser, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.browser.text")); // NOI18N
         browser.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.browser.toolTipText")); // NOI18N
+        browser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                browserActionPerformed(evt);
+            }
+        });
 
         org.openide.awt.Mnemonics.setLocalizedText(couch, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.couch.text")); // NOI18N
         couch.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.couch.toolTipText")); // NOI18N
@@ -831,6 +847,10 @@ final class JSHintPanel extends javax.swing.JPanel {
     private void bitwiseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bitwiseActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bitwiseActionPerformed
+
+    private void browserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_browserActionPerformed
 
     void load() {
         asi.setSelected(JSHintOptions.getInstance().getOption("asi"));
