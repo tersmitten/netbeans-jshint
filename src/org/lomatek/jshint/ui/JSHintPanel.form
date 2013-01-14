@@ -16,27 +16,28 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="SelectAll" min="-2" max="-2" attributes="0"/>
+                      <Component id="Separator1" max="32767" attributes="1"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="UnselectAll" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="OptionsScroll" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Separator1" max="32767" attributes="1"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="Extra" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="Prefedined" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="SelectAll" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="UnselectAll" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="TabbedPane" max="32767" attributes="0"/>
+                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -46,7 +47,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="OptionsScroll" min="-2" pref="344" max="-2" attributes="0"/>
+              <Component id="TabbedPane" min="-2" pref="426" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="UnselectAll" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -54,12 +55,9 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="Separator1" min="-2" pref="7" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="Extra" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="Extra" min="-2" max="-2" attributes="0"/>
                   <Component id="Prefedined" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -68,127 +66,90 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JScrollPane" name="OptionsScroll">
+    <Container class="javax.swing.JTabbedPane" name="TabbedPane">
+      <Properties>
+        <Property name="tabPlacement" type="int" value="2"/>
+      </Properties>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="Options">
+        <Container class="javax.swing.JScrollPane" name="OptionsScroll1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Enforcing">
+                <Property name="tabTitle" type="java.lang.String" value="Enforcing"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
 
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="Enforcing" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Relaxing" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Environments" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Legacy" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Relaxing" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="Enforcing" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="Legacy" min="-2" max="-2" attributes="0"/>
-                  <Component id="Environments" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="Enforcing">
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="EnforcingLabel" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="curly" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="bitwise" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="eqeq" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="forin" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="regexp" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="undef" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="camelcase" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="newcap" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="plusplus" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="noempty" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nonew" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="latedef" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="noarg" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="immed" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="unused" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="strict" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="trailing" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
+                      <Component id="bitwise" min="-2" max="-2" attributes="0"/>
+                      <Component id="camelcase" min="-2" max="-2" attributes="0"/>
+                      <Component id="curly" min="-2" max="-2" attributes="0"/>
+                      <Component id="eqeq" min="-2" max="-2" attributes="0"/>
+                      <Component id="forin" min="-2" max="-2" attributes="0"/>
+                      <Component id="immed" min="-2" max="-2" attributes="0"/>
+                      <Component id="latedef" min="-2" max="-2" attributes="0"/>
+                      <Component id="newcap" min="-2" max="-2" attributes="0"/>
+                      <Component id="noarg" min="-2" max="-2" attributes="0"/>
+                      <Component id="noempty" min="-2" max="-2" attributes="0"/>
+                      <Component id="nonew" min="-2" max="-2" attributes="0"/>
+                      <Component id="plusplus" min="-2" max="-2" attributes="0"/>
+                      <Component id="regexp" min="-2" max="-2" attributes="0"/>
+                      <Component id="undef" min="-2" max="-2" attributes="0"/>
+                      <Component id="unused" min="-2" max="-2" attributes="0"/>
+                      <Component id="strict" min="-2" max="-2" attributes="0"/>
+                      <Component id="trailing" min="-2" max="-2" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="EnforcingLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="bitwise" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="camelcase" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="curly" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="eqeq" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="forin" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="immed" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="latedef" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="newcap" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="noarg" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="noempty" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="nonew" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="plusplus" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="regexp" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="undef" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="unused" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="strict" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="trailing" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="EnforcingLabel">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Ubuntu" size="15" style="1"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/lomatek/jshint/ui/Bundle.properties" key="JSHintPanel.EnforcingLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
-                    </Property>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JCheckBox" name="bitwise">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -370,112 +331,108 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="OptionsScroll2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Relaxing">
+                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/lomatek/jshint/ui/Bundle.properties" key="JSHintPanel.OptionsScroll2.TabConstraints.tabTitle" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="Relaxing">
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="iterator" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="globalstrict" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="funcscope" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="evil" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="es5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="debug" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laxcomma" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="loopfunc" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lastsemic" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laxbreak" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="boss" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="eqnull" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="multistr" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="esnext" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="onecase" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="expr" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="proto" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="redexdash" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="asi" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="supernew" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="sub" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="shadow" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="smarttabs" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="scripturl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="RelaxingLabel" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="asi" min="-2" max="-2" attributes="0"/>
+                      <Component id="boss" min="-2" max="-2" attributes="0"/>
+                      <Component id="debug" min="-2" max="-2" attributes="0"/>
+                      <Component id="eqnull" min="-2" max="-2" attributes="0"/>
+                      <Component id="es5" min="-2" max="-2" attributes="0"/>
+                      <Component id="esnext" min="-2" max="-2" attributes="0"/>
+                      <Component id="evil" min="-2" max="-2" attributes="0"/>
+                      <Component id="expr" min="-2" max="-2" attributes="0"/>
+                      <Component id="funcscope" min="-2" max="-2" attributes="0"/>
+                      <Component id="globalstrict" min="-2" max="-2" attributes="0"/>
+                      <Component id="iterator" min="-2" max="-2" attributes="0"/>
+                      <Component id="lastsemic" min="-2" max="-2" attributes="0"/>
+                      <Component id="laxbreak" min="-2" max="-2" attributes="0"/>
+                      <Component id="laxcomma" min="-2" max="-2" attributes="0"/>
+                      <Component id="loopfunc" min="-2" max="-2" attributes="0"/>
+                      <Component id="multistr" min="-2" max="-2" attributes="0"/>
+                      <Component id="onecase" min="-2" max="-2" attributes="0"/>
+                      <Component id="proto" min="-2" max="-2" attributes="0"/>
+                      <Component id="redexdash" min="-2" max="-2" attributes="0"/>
+                      <Component id="scripturl" min="-2" max="-2" attributes="0"/>
+                      <Component id="smarttabs" min="-2" max="-2" attributes="0"/>
+                      <Component id="shadow" min="-2" max="-2" attributes="0"/>
+                      <Component id="sub" min="-2" max="-2" attributes="0"/>
+                      <Component id="supernew" min="-2" max="-2" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="RelaxingLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="asi" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="boss" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="debug" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="eqnull" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="es5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="esnext" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="evil" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="expr" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="funcscope" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="globalstrict" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="iterator" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="lastsemic" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="laxbreak" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="laxcomma" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="loopfunc" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="multistr" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="onecase" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="proto" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="redexdash" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="scripturl" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="smarttabs" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="shadow" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="sub" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="supernew" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="RelaxingLabel">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Ubuntu" size="15" style="1"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/lomatek/jshint/ui/Bundle.properties" key="JSHintPanel.RelaxingLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
-                    </Property>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JCheckBox" name="asi">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -721,74 +678,75 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="OptionsScroll3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Enviroments">
+                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/lomatek/jshint/ui/Bundle.properties" key="JSHintPanel.OptionsScroll3.TabConstraints.tabTitle" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="Environments">
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="browser" min="-2" max="-2" attributes="0"/>
+                      <Component id="couch" min="-2" max="-2" attributes="0"/>
+                      <Component id="devel" min="-2" max="-2" attributes="0"/>
+                      <Component id="dojo" min="-2" max="-2" attributes="0"/>
                       <Component id="jquery" min="-2" max="-2" attributes="0"/>
                       <Component id="mootools" min="-2" max="-2" attributes="0"/>
-                      <Component id="node" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="nonstandard" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="prototypejs" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="rhino" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="worker" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="wsh" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="yui" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="browser" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="couch" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="devel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="dojo" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="EnviromentsLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="node" min="-2" max="-2" attributes="0"/>
+                      <Component id="nonstandard" min="-2" max="-2" attributes="0"/>
+                      <Component id="prototypejs" min="-2" max="-2" attributes="0"/>
+                      <Component id="rhino" min="-2" max="-2" attributes="0"/>
+                      <Component id="worker" min="-2" max="-2" attributes="0"/>
+                      <Component id="wsh" min="-2" max="-2" attributes="0"/>
+                      <Component id="yui" min="-2" max="-2" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="EnviromentsLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="browser" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="couch" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="devel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="dojo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="jquery" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="mootools" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="node" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="nonstandard" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="prototypejs" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
                           <Component id="rhino" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
+                          <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
                           <Component id="worker" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="wsh" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="yui" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="EnviromentsLabel">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Ubuntu" size="15" style="1"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/lomatek/jshint/ui/Bundle.properties" key="JSHintPanel.EnviromentsLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
-                    </Property>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JCheckBox" name="browser">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -925,47 +883,48 @@
                 </Component>
               </SubComponents>
             </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="OptionsScroll4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Legacy">
+                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="org/lomatek/jshint/ui/Bundle.properties" key="JSHintPanel.OptionsScroll4.TabConstraints.tabTitle" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
             <Container class="javax.swing.JPanel" name="Legacy">
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="nomen" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="nomen" min="-2" max="-2" attributes="0"/>
                       <Component id="onevar" min="-2" max="-2" attributes="0"/>
                       <Component id="passfail" min="-2" max="-2" attributes="0"/>
                       <Component id="white" min="-2" max="-2" attributes="0"/>
-                      <Component id="LegacyLabel" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="LegacyLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="nomen" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="onevar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="passfail" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="white" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="LegacyLabel">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Ubuntu" size="15" style="1"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                      <ResourceString bundle="org/lomatek/jshint/ui/Bundle.properties" key="JSHintPanel.LegacyLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
-                    </Property>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JCheckBox" name="nomen">
                   <Properties>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -1152,7 +1111,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="predefScroll" max="32767" attributes="0"/>
+                      <Component id="predefScroll" pref="545" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="predefLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -1167,7 +1126,7 @@
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="predefLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="predefScroll" pref="0" max="32767" attributes="1"/>
+                  <Component id="predefScroll" pref="89" max="32767" attributes="1"/>
               </Group>
           </Group>
         </DimensionLayout>

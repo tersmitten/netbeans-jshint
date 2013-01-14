@@ -43,10 +43,9 @@ final class JSHintPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        OptionsScroll = new javax.swing.JScrollPane();
-        Options = new javax.swing.JPanel();
+        TabbedPane = new javax.swing.JTabbedPane();
+        OptionsScroll1 = new javax.swing.JScrollPane();
         Enforcing = new javax.swing.JPanel();
-        EnforcingLabel = new javax.swing.JLabel();
         bitwise = new javax.swing.JCheckBox();
         camelcase = new javax.swing.JCheckBox();
         curly = new javax.swing.JCheckBox();
@@ -64,8 +63,8 @@ final class JSHintPanel extends javax.swing.JPanel {
         unused = new javax.swing.JCheckBox();
         strict = new javax.swing.JCheckBox();
         trailing = new javax.swing.JCheckBox();
+        OptionsScroll2 = new javax.swing.JScrollPane();
         Relaxing = new javax.swing.JPanel();
-        RelaxingLabel = new javax.swing.JLabel();
         asi = new javax.swing.JCheckBox();
         boss = new javax.swing.JCheckBox();
         debug = new javax.swing.JCheckBox();
@@ -90,8 +89,8 @@ final class JSHintPanel extends javax.swing.JPanel {
         shadow = new javax.swing.JCheckBox();
         sub = new javax.swing.JCheckBox();
         supernew = new javax.swing.JCheckBox();
+        OptionsScroll3 = new javax.swing.JScrollPane();
         Environments = new javax.swing.JPanel();
-        EnviromentsLabel = new javax.swing.JLabel();
         browser = new javax.swing.JCheckBox();
         couch = new javax.swing.JCheckBox();
         devel = new javax.swing.JCheckBox();
@@ -105,8 +104,8 @@ final class JSHintPanel extends javax.swing.JPanel {
         worker = new javax.swing.JCheckBox();
         wsh = new javax.swing.JCheckBox();
         yui = new javax.swing.JCheckBox();
+        OptionsScroll4 = new javax.swing.JScrollPane();
         Legacy = new javax.swing.JPanel();
-        LegacyLabel = new javax.swing.JLabel();
         nomen = new javax.swing.JCheckBox();
         onevar = new javax.swing.JCheckBox();
         passfail = new javax.swing.JCheckBox();
@@ -126,9 +125,7 @@ final class JSHintPanel extends javax.swing.JPanel {
         predefScroll = new javax.swing.JScrollPane();
         predef = new javax.swing.JTextArea();
 
-        EnforcingLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        EnforcingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        org.openide.awt.Mnemonics.setLocalizedText(EnforcingLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.EnforcingLabel.text")); // NOI18N
+        TabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
         org.openide.awt.Mnemonics.setLocalizedText(bitwise, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.text")); // NOI18N
         bitwise.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.toolTipText")); // NOI18N
@@ -200,75 +197,66 @@ final class JSHintPanel extends javax.swing.JPanel {
         Enforcing.setLayout(EnforcingLayout);
         EnforcingLayout.setHorizontalGroup(
             EnforcingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EnforcingLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(EnforcingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(EnforcingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(EnforcingLayout.createSequentialGroup()
-                        .addGroup(EnforcingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(curly)
-                            .addComponent(bitwise)
-                            .addComponent(eqeq)
-                            .addComponent(forin)
-                            .addComponent(regexp)
-                            .addComponent(undef)
-                            .addComponent(camelcase)
-                            .addComponent(newcap)
-                            .addComponent(plusplus)
-                            .addComponent(noempty)
-                            .addComponent(nonew)
-                            .addComponent(latedef)
-                            .addComponent(noarg)
-                            .addComponent(immed)
-                            .addComponent(unused)
-                            .addComponent(strict)
-                            .addComponent(trailing))
-                        .addContainerGap())))
+            .addComponent(bitwise)
+            .addComponent(camelcase)
+            .addComponent(curly)
+            .addComponent(eqeq)
+            .addComponent(forin)
+            .addComponent(immed)
+            .addComponent(latedef)
+            .addComponent(newcap)
+            .addComponent(noarg)
+            .addComponent(noempty)
+            .addComponent(nonew)
+            .addComponent(plusplus)
+            .addComponent(regexp)
+            .addComponent(undef)
+            .addComponent(unused)
+            .addComponent(strict)
+            .addComponent(trailing)
         );
         EnforcingLayout.setVerticalGroup(
             EnforcingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EnforcingLayout.createSequentialGroup()
-                .addComponent(EnforcingLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(bitwise)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(camelcase)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(curly)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(eqeq)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(forin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(immed)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(latedef)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(newcap)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(noarg)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(noempty)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(nonew)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(plusplus)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(regexp)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(undef)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(unused)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(strict)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(trailing)
-                .addContainerGap())
+                .addGap(6, 6, 6)
+                .addComponent(trailing))
         );
 
-        RelaxingLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        RelaxingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        org.openide.awt.Mnemonics.setLocalizedText(RelaxingLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.RelaxingLabel.text")); // NOI18N
+        OptionsScroll1.setViewportView(Enforcing);
+
+        TabbedPane.addTab("Enforcing", OptionsScroll1);
 
         org.openide.awt.Mnemonics.setLocalizedText(asi, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.asi.text")); // NOI18N
         asi.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.asi.toolTipText")); // NOI18N
@@ -349,93 +337,87 @@ final class JSHintPanel extends javax.swing.JPanel {
         Relaxing.setLayout(RelaxingLayout);
         RelaxingLayout.setHorizontalGroup(
             RelaxingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RelaxingLayout.createSequentialGroup()
-                .addGroup(RelaxingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(iterator)
-                    .addComponent(globalstrict)
-                    .addComponent(funcscope)
-                    .addComponent(evil)
-                    .addComponent(es5)
-                    .addComponent(debug)
-                    .addComponent(laxcomma)
-                    .addComponent(loopfunc)
-                    .addComponent(lastsemic)
-                    .addComponent(laxbreak)
-                    .addComponent(boss)
-                    .addComponent(eqnull)
-                    .addComponent(multistr)
-                    .addComponent(esnext)
-                    .addComponent(onecase)
-                    .addComponent(expr)
-                    .addComponent(proto)
-                    .addComponent(redexdash)
-                    .addComponent(asi)
-                    .addComponent(supernew)
-                    .addComponent(sub)
-                    .addComponent(shadow)
-                    .addComponent(smarttabs)
-                    .addComponent(scripturl)
-                    .addComponent(RelaxingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(asi)
+            .addComponent(boss)
+            .addComponent(debug)
+            .addComponent(eqnull)
+            .addComponent(es5)
+            .addComponent(esnext)
+            .addComponent(evil)
+            .addComponent(expr)
+            .addComponent(funcscope)
+            .addComponent(globalstrict)
+            .addComponent(iterator)
+            .addComponent(lastsemic)
+            .addComponent(laxbreak)
+            .addComponent(laxcomma)
+            .addComponent(loopfunc)
+            .addComponent(multistr)
+            .addComponent(onecase)
+            .addComponent(proto)
+            .addComponent(redexdash)
+            .addComponent(scripturl)
+            .addComponent(smarttabs)
+            .addComponent(shadow)
+            .addComponent(sub)
+            .addComponent(supernew)
         );
         RelaxingLayout.setVerticalGroup(
             RelaxingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RelaxingLayout.createSequentialGroup()
-                .addComponent(RelaxingLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(asi)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(boss)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(debug)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(eqnull)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(es5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(esnext)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(evil)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(expr)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(funcscope)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(globalstrict)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(iterator)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(lastsemic)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(laxbreak)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(laxcomma)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(loopfunc)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(multistr)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(onecase)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(proto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(redexdash)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(scripturl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(smarttabs)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(shadow)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(sub)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(supernew)
-                .addContainerGap())
+                .addGap(6, 6, 6)
+                .addComponent(supernew))
         );
 
-        EnviromentsLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        EnviromentsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        org.openide.awt.Mnemonics.setLocalizedText(EnviromentsLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.EnviromentsLabel.text")); // NOI18N
+        OptionsScroll2.setViewportView(Relaxing);
+
+        TabbedPane.addTab(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.OptionsScroll2.TabConstraints.tabTitle"), OptionsScroll2); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(browser, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.browser.text")); // NOI18N
         browser.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.browser.toolTipText")); // NOI18N
@@ -484,6 +466,10 @@ final class JSHintPanel extends javax.swing.JPanel {
         Environments.setLayout(EnvironmentsLayout);
         EnvironmentsLayout.setHorizontalGroup(
             EnvironmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(browser)
+            .addComponent(couch)
+            .addComponent(devel)
+            .addComponent(dojo)
             .addComponent(jquery)
             .addComponent(mootools)
             .addComponent(node)
@@ -493,48 +479,41 @@ final class JSHintPanel extends javax.swing.JPanel {
             .addComponent(worker)
             .addComponent(wsh)
             .addComponent(yui)
-            .addComponent(browser)
-            .addComponent(couch)
-            .addComponent(devel)
-            .addComponent(dojo)
-            .addComponent(EnviromentsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         EnvironmentsLayout.setVerticalGroup(
             EnvironmentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EnvironmentsLayout.createSequentialGroup()
-                .addComponent(EnviromentsLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(browser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(couch)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(devel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(dojo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(jquery)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(mootools)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(node)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(nonstandard)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(prototypejs)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(7, 7, 7)
                 .addComponent(rhino)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
                 .addComponent(worker)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(wsh)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(yui)
-                .addContainerGap())
+                .addGap(6, 6, 6)
+                .addComponent(yui))
         );
 
-        LegacyLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        LegacyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        org.openide.awt.Mnemonics.setLocalizedText(LegacyLabel, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.LegacyLabel.text")); // NOI18N
+        OptionsScroll3.setViewportView(Environments);
+
+        TabbedPane.addTab(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.OptionsScroll3.TabConstraints.tabTitle"), OptionsScroll3); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(nomen, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nomen.text")); // NOI18N
         nomen.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.nomen.toolTipText")); // NOI18N
@@ -556,46 +535,23 @@ final class JSHintPanel extends javax.swing.JPanel {
             .addComponent(onevar)
             .addComponent(passfail)
             .addComponent(white)
-            .addComponent(LegacyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         LegacyLayout.setVerticalGroup(
             LegacyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LegacyLayout.createSequentialGroup()
-                .addComponent(LegacyLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(nomen)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(onevar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(passfail)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(white)
-                .addContainerGap())
+                .addComponent(white))
         );
 
-        javax.swing.GroupLayout OptionsLayout = new javax.swing.GroupLayout(Options);
-        Options.setLayout(OptionsLayout);
-        OptionsLayout.setHorizontalGroup(
-            OptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OptionsLayout.createSequentialGroup()
-                .addComponent(Enforcing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Relaxing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Environments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Legacy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
-        );
-        OptionsLayout.setVerticalGroup(
-            OptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Relaxing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Enforcing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Legacy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Environments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        OptionsScroll4.setViewportView(Legacy);
 
-        OptionsScroll.setViewportView(Options);
+        TabbedPane.addTab(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.OptionsScroll4.TabConstraints.tabTitle"), OptionsScroll4); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(SelectAll, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.SelectAll.text")); // NOI18N
         SelectAll.addActionListener(new java.awt.event.ActionListener() {
@@ -681,7 +637,7 @@ final class JSHintPanel extends javax.swing.JPanel {
             .addGroup(PrefedinedLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PrefedinedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(predefScroll)
+                    .addComponent(predefScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
                     .addGroup(PrefedinedLayout.createSequentialGroup()
                         .addComponent(predefLabel)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -692,7 +648,7 @@ final class JSHintPanel extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addComponent(predefLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(predefScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(predefScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -703,37 +659,36 @@ final class JSHintPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(SelectAll)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(UnselectAll)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(OptionsScroll, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Separator1))
-                        .addGap(14, 14, 14))
+                        .addComponent(Separator1)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Prefedined, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(SelectAll)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(UnselectAll)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(TabbedPane)
+                        .addGap(12, 12, 12))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(OptionsScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UnselectAll)
                     .addComponent(SelectAll))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Separator1, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0))
+                    .addComponent(Extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Prefedined, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -1026,19 +981,18 @@ final class JSHintPanel extends javax.swing.JPanel {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Enforcing;
-    private javax.swing.JLabel EnforcingLabel;
-    private javax.swing.JLabel EnviromentsLabel;
     private javax.swing.JPanel Environments;
     private javax.swing.JPanel Extra;
     private javax.swing.JPanel Legacy;
-    private javax.swing.JLabel LegacyLabel;
-    private javax.swing.JPanel Options;
-    private javax.swing.JScrollPane OptionsScroll;
+    private javax.swing.JScrollPane OptionsScroll1;
+    private javax.swing.JScrollPane OptionsScroll2;
+    private javax.swing.JScrollPane OptionsScroll3;
+    private javax.swing.JScrollPane OptionsScroll4;
     private javax.swing.JPanel Prefedined;
     private javax.swing.JPanel Relaxing;
-    private javax.swing.JLabel RelaxingLabel;
     private javax.swing.JButton SelectAll;
     private javax.swing.JSeparator Separator1;
+    private javax.swing.JTabbedPane TabbedPane;
     private javax.swing.JButton UnselectAll;
     private javax.swing.JCheckBox asi;
     private javax.swing.JCheckBox bitwise;
