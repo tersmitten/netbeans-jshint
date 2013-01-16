@@ -125,8 +125,6 @@ final class JSHintPanel extends javax.swing.JPanel {
         predefScroll = new javax.swing.JScrollPane();
         predef = new javax.swing.JTextArea();
 
-        TabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-
         bitwise.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(bitwise, org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.text")); // NOI18N
         bitwise.setToolTipText(org.openide.util.NbBundle.getMessage(JSHintPanel.class, "JSHintPanel.bitwise.toolTipText")); // NOI18N
@@ -653,7 +651,7 @@ final class JSHintPanel extends javax.swing.JPanel {
             .addGroup(PrefedinedLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PrefedinedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(predefScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
+                    .addComponent(predefScroll)
                     .addGroup(PrefedinedLayout.createSequentialGroup()
                         .addComponent(predefLabel)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -675,27 +673,27 @@ final class JSHintPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Separator1)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Prefedined, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(SelectAll)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(UnselectAll)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(TabbedPane)
-                        .addGap(12, 12, 12))))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Separator1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Extra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Prefedined, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(SelectAll)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(UnselectAll)
+                                .addGap(626, 626, 626)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UnselectAll)
@@ -715,125 +713,151 @@ final class JSHintPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_indentActionPerformed
 
     private void UnselectAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UnselectAllActionPerformed
-        asi.setSelected(false);
-        bitwise.setSelected(false);
-        boss.setSelected(false);
-        browser.setSelected(false);
-        camelcase.setSelected(false);
-        couch.setSelected(false);
-        curly.setSelected(false);
-        debug.setSelected(false);
-        devel.setSelected(false);
-        dojo.setSelected(false);
-        eqeq.setSelected(false);
-        eqnull.setSelected(false);
-        es5.setSelected(false);
-        esnext.setSelected(false);
-        evil.setSelected(false);
-        expr.setSelected(false);
-        forin.setSelected(false);
-        funcscope.setSelected(false);
-        globalstrict.setSelected(false);
-        immed.setSelected(false);
-        iterator.setSelected(false);
-        jquery.setSelected(false);
-        lastsemic.setSelected(false);
-        latedef.setSelected(false);
-        laxbreak.setSelected(false);
-        laxcomma.setSelected(false);
-        loopfunc.setSelected(false);
-        mootools.setSelected(false);
-        multistr.setSelected(false);
-        newcap.setSelected(false);
-        noarg.setSelected(false);
-        node.setSelected(false);
-        noempty.setSelected(false);
-        nomen.setSelected(false);
-        nonew.setSelected(false);
-        nonstandard.setSelected(false);
-        onecase.setSelected(false);
-        onevar.setSelected(false);
-        passfail.setSelected(false);
-        plusplus.setSelected(false);
-        proto.setSelected(false);
-        prototypejs.setSelected(false);
-        redexdash.setSelected(false);
-        regexp.setSelected(false);
-        rhino.setSelected(false);
-        scripturl.setSelected(false);
-        shadow.setSelected(false);
-        smarttabs.setSelected(false);
-        strict.setSelected(false);
-        sub.setSelected(false);
-        supernew.setSelected(false);
-        trailing.setSelected(false);
-        undef.setSelected(false);
-        unused.setSelected(false);
-        white.setSelected(false);
-        worker.setSelected(false);
-        wsh.setSelected(false);
-        yui.setSelected(false);
+        int selectedTabIndex = TabbedPane.getSelectedIndex();
+        switch (selectedTabIndex) {
+            case 0:
+                bitwise.setSelected(false);
+                camelcase.setSelected(false);
+                curly.setSelected(false);
+                eqeq.setSelected(false);
+                forin.setSelected(false);
+                immed.setSelected(false);
+                latedef.setSelected(false);
+                newcap.setSelected(false);
+                noarg.setSelected(false);
+                noempty.setSelected(false);
+                nonew.setSelected(false);
+                plusplus.setSelected(false);
+                regexp.setSelected(false);
+                undef.setSelected(false);
+                unused.setSelected(false);
+                strict.setSelected(false);
+                trailing.setSelected(false);
+                break;
+            case 1:
+                asi.setSelected(false);
+                boss.setSelected(false);
+                debug.setSelected(false);
+                eqnull.setSelected(false);
+                es5.setSelected(false);
+                esnext.setSelected(false);
+                evil.setSelected(false);
+                expr.setSelected(false);
+                funcscope.setSelected(false);
+                globalstrict.setSelected(false);
+                iterator.setSelected(false);
+                lastsemic.setSelected(false);
+                laxbreak.setSelected(false);
+                laxcomma.setSelected(false);
+                loopfunc.setSelected(false);
+                multistr.setSelected(false);
+                onecase.setSelected(false);
+                proto.setSelected(false);
+                redexdash.setSelected(false);
+                scripturl.setSelected(false);
+                smarttabs.setSelected(false);
+                shadow.setSelected(false);
+                sub.setSelected(false);
+                supernew.setSelected(false);
+                break;
+            case 2:
+                browser.setSelected(false);
+                couch.setSelected(false);
+                devel.setSelected(false);
+                dojo.setSelected(false);
+                jquery.setSelected(false);
+                mootools.setSelected(false);
+                node.setSelected(false);
+                nonstandard.setSelected(false);
+                prototypejs.setSelected(false);
+                rhino.setSelected(false);
+                worker.setSelected(false);
+                wsh.setSelected(false);
+                yui.setSelected(false);
+                break;
+            case 3:
+                nomen.setSelected(false);
+                onevar.setSelected(false);
+                passfail.setSelected(false);
+                white.setSelected(false);
+                break;
+            default:
+                break;
+        }
     }//GEN-LAST:event_UnselectAllActionPerformed
 
     private void SelectAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectAllActionPerformed
-        asi.setSelected(true);
-        bitwise.setSelected(true);
-        boss.setSelected(true);
-        browser.setSelected(true);
-        camelcase.setSelected(true);
-        couch.setSelected(true);
-        curly.setSelected(true);
-        debug.setSelected(true);
-        devel.setSelected(true);
-        dojo.setSelected(true);
-        eqeq.setSelected(true);
-        eqnull.setSelected(true);
-        es5.setSelected(true);
-        esnext.setSelected(true);
-        evil.setSelected(true);
-        expr.setSelected(true);
-        forin.setSelected(true);
-        funcscope.setSelected(true);
-        globalstrict.setSelected(true);
-        immed.setSelected(true);
-        iterator.setSelected(true);
-        jquery.setSelected(true);
-        lastsemic.setSelected(true);
-        latedef.setSelected(true);
-        laxbreak.setSelected(true);
-        laxcomma.setSelected(true);
-        loopfunc.setSelected(true);
-        mootools.setSelected(true);
-        multistr.setSelected(true);
-        newcap.setSelected(true);
-        noarg.setSelected(true);
-        node.setSelected(true);
-        noempty.setSelected(true);
-        nomen.setSelected(true);
-        nonew.setSelected(true);
-        nonstandard.setSelected(true);
-        onecase.setSelected(true);
-        onevar.setSelected(true);
-        passfail.setSelected(true);
-        plusplus.setSelected(true);
-        proto.setSelected(true);
-        prototypejs.setSelected(true);
-        redexdash.setSelected(true);
-        regexp.setSelected(true);
-        rhino.setSelected(true);
-        scripturl.setSelected(true);
-        shadow.setSelected(true);
-        smarttabs.setSelected(true);
-        strict.setSelected(true);
-        sub.setSelected(true);
-        supernew.setSelected(true);
-        trailing.setSelected(true);
-        undef.setSelected(true);
-        unused.setSelected(true);
-        white.setSelected(true);
-        worker.setSelected(true);
-        wsh.setSelected(true);
-        yui.setSelected(true);
+        int selectedTabIndex = TabbedPane.getSelectedIndex();
+        switch (selectedTabIndex) {
+            case 0:
+                bitwise.setSelected(true);
+                camelcase.setSelected(true);
+                curly.setSelected(true);
+                eqeq.setSelected(true);
+                forin.setSelected(true);
+                immed.setSelected(true);
+                latedef.setSelected(true);
+                newcap.setSelected(true);
+                noarg.setSelected(true);
+                noempty.setSelected(true);
+                nonew.setSelected(true);
+                plusplus.setSelected(true);
+                regexp.setSelected(true);
+                undef.setSelected(true);
+                unused.setSelected(true);
+                strict.setSelected(true);
+                trailing.setSelected(true);
+                break;
+            case 1:
+                asi.setSelected(true);
+                boss.setSelected(true);
+                debug.setSelected(true);
+                eqnull.setSelected(true);
+                es5.setSelected(true);
+                esnext.setSelected(true);
+                evil.setSelected(true);
+                expr.setSelected(true);
+                funcscope.setSelected(true);
+                globalstrict.setSelected(true);
+                iterator.setSelected(true);
+                lastsemic.setSelected(true);
+                laxbreak.setSelected(true);
+                laxcomma.setSelected(true);
+                loopfunc.setSelected(true);
+                multistr.setSelected(true);
+                onecase.setSelected(true);
+                proto.setSelected(true);
+                redexdash.setSelected(true);
+                scripturl.setSelected(true);
+                smarttabs.setSelected(true);
+                shadow.setSelected(true);
+                sub.setSelected(true);
+                supernew.setSelected(true);
+                break;
+            case 2:
+                browser.setSelected(true);
+                couch.setSelected(true);
+                devel.setSelected(true);
+                dojo.setSelected(true);
+                jquery.setSelected(true);
+                mootools.setSelected(true);
+                node.setSelected(true);
+                nonstandard.setSelected(true);
+                prototypejs.setSelected(true);
+                rhino.setSelected(true);
+                worker.setSelected(true);
+                wsh.setSelected(true);
+                yui.setSelected(true);
+                break;
+            case 3:
+                nomen.setSelected(true);
+                onevar.setSelected(true);
+                passfail.setSelected(true);
+                white.setSelected(true);
+                break;
+            default:
+                break;
+        }
     }//GEN-LAST:event_SelectAllActionPerformed
 
     private void camelcaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_camelcaseActionPerformed
