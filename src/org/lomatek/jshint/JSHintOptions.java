@@ -23,6 +23,8 @@
  */
 package org.lomatek.jshint;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.openide.util.NbPreferences;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.NativeArray;
@@ -45,6 +47,7 @@ public class JSHintOptions {
         "regexdash", "regexp", "rhino", "undef", "unused", "scripturl", 
         "shadow", "smarttabs", "strict", "sub", "supernew", "trailing", 
         "validthis", "withstmt", "white", "worker", "wsh", "yui"};
+    private static Map<String, Boolean> defaults = new HashMap<String, Boolean>();
     private static String directive = null;
     private static Scriptable options = null;
     
@@ -56,11 +59,28 @@ public class JSHintOptions {
         return INSTANCE;
     }
     
-    private JSHintOptions() {}
+    private JSHintOptions() {
+        defaults.put("bitwise", true);
+        defaults.put("curly", true);
+        defaults.put("eqeq", true);
+        defaults.put("forin", true);
+        defaults.put("noarg", true);
+        defaults.put("noempty", true);
+        defaults.put("nonew", true);
+        defaults.put("undef", true);
+        defaults.put("unused", true);
+        defaults.put("strict", true);
+        defaults.put("browser", true);
+        defaults.put("jquery", true);
+    }
     
     // Get option as boolean
     public boolean getOption(String key) {
 	return NbPreferences.forModule(JSHintOptions.class).getBoolean(key, false);
+    }
+    // Get option as boolean
+    public boolean getOption(String key, boolean bool) {
+	return NbPreferences.forModule(JSHintOptions.class).getBoolean(key, bool);
     }
     // Get option as integer
     public int getOption(String key, int integer) {
@@ -89,7 +109,11 @@ public class JSHintOptions {
         }
 	options = context.newObject(scope);
 	for (String key : OPTIONS) {
-	    options.put(key, options, getOption(key));
+            Boolean defValue = false;
+            if (defaults.containsKey(key) == true) {
+                defValue = defaults.get(key);
+            }
+	    options.put(key, options, getOption(key, defValue));
 	}
 	// Predefined
 	if ( ! "".equals(getOption("predef", ""))) {
