@@ -1,5 +1,11 @@
 JSHint plugin for NetBeans
 =======================================
 
-Plguin page: http://plugins.netbeans.org/plugin/40893/?show=true
+Based on:
+LaurentGoderre / netbeans-jshint
+https://github.com/LaurentGoderre/netbeans-jshint
+
+lomatek / netbeans-jslint
+https://github.com/lomatek/netbeans-jslint
+
 License: The MIT license
