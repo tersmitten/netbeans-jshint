@@ -2,6 +2,7 @@ JSHint plugin for NetBeans
 =======================================
 
 Based on:
+
 LaurentGoderre / netbeans-jshint
 https://github.com/LaurentGoderre/netbeans-jshint
 
