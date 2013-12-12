@@ -87,7 +87,7 @@ public class JSHintTaskScanner extends FileTaskScanner {
 	    } else {
 		text = getContent(file);
 	    }
-	    List<JSHintIssue> errors = JSHintRun.getInstance().run(text);
+	    List<JSHintIssue> errors = JSHintRun.getInstance().run(text, file);
 	    if (null != dObj) {
 		// Clear annotation list of Editor
 		JSHintIssueAnnotation.clear(dObj);

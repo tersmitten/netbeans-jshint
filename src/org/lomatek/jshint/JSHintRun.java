@@ -36,6 +36,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
+import org.openide.filesystems.FileObject;
 import org.openide.util.Exceptions;
 
 /**
@@ -62,11 +63,12 @@ final public class JSHintRun {
 	return instance;
     }
 
-    public List<JSHintIssue> run(String contents) {
+    public List<JSHintIssue> run(String contents, FileObject file) {
 	init();
 	scope.put("contents", scope, contents);
 	// Get options
-	scope.put("opts", scope, JSHintOptions.getInstance().getOptions(context, scope));
+	scope.put("opts", scope, JSHintOptions.getInstance().getOptions(context, scope, file));
+        System.err.println("RUNNING JSHINT:");
 	context.evaluateString(scope, "results = JSHINT(contents, opts);", "JSHint", 1, null);
 	Scriptable lint = (Scriptable) scope.get("JSHINT", scope);
 	// We leave out of context
