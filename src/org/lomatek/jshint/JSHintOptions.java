@@ -1,18 +1,18 @@
 /*
  *  The MIT License
- * 
+ *
  *  Copyright (c) 2011 by Stanislav Lomadurov <lord.rojer@gmail.com>
- * 
+ *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
  *  in the Software without restriction, including without limitation the rights
  *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  *  copies of the Software, and to permit persons to whom the Software is
  *  furnished to do so, subject to the following conditions:
- * 
+ *
  *  The above copyright notice and this permission notice shall be included in
  *  all copies or substantial portions of the Software.
- * 
+ *
  *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -33,15 +33,16 @@ import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 import org.openide.filesystems.FileObject;
 import org.openide.util.NbPreferences;
+
 /**
  *
  * @author Stanislav Lomadurov <lord.rojer@gmail.com>
  */
 public class JSHintOptions {
-    
+
     private static JSHintOptions INSTANCE;
     private static Scriptable options = null;
-    
+
     public static JSHintOptions getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new JSHintOptions();
@@ -49,23 +50,23 @@ public class JSHintOptions {
 
         return INSTANCE;
     }
- 
+
     // Get the Rhino context contains options for JSHint
     public Scriptable getOptions(Context context, Scriptable scope, FileObject file) {
         if (null != options) return options;
         options = context.newObject(scope);
-        
+
         String optionText = getOptionsFile(file);
         System.err.println("JSHint options: " + optionText);
         if (null == optionText) return options;
-        
+
         JSONObject json = (JSONObject) JSONValue.parse(optionText);
         Iterator iter = json.entrySet().iterator();
         while (iter.hasNext()) {
             Map.Entry<String, Object> entry = (Map.Entry) iter.next();
             options.put(entry.getKey(), options, entry.getValue());
         }
-               
+
         return options;
     }
 
@@ -78,7 +79,7 @@ public class JSHintOptions {
                 } catch (IOException ex) {
                     return null;
                 }
-             }
+            }
             if (!sourceFile.isRoot()) {
                 return getOptionsFile(sourceFile.getParent());
             }
