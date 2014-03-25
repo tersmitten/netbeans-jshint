@@ -97,7 +97,9 @@ public class JSHintTaskScanner extends FileTaskScanner {
             }
             for (JSHintIssue issue : errors) {
                 if (null != currentDocument) {
-                    JSHintIssueAnnotation.createAnnotation(dObj, cLine, issue.getReason(), issue.getLine(), issue.getCharacter(), issue.getLength());
+                    JSHintIssueAnnotation.createAnnotation(
+                        dObj, cLine, issue.getReason(), issue.getLine(), issue.getCharacter(), issue.getLength()
+                    );
                 }
                 // Create new Task
                 Task task = Task.create(file, GROUP_NAME, issue.getReason(), issue.getLine());
@@ -111,7 +113,7 @@ public class JSHintTaskScanner extends FileTaskScanner {
 
     private String getContent(FileObject file) throws IOException {
         // Set encoding
-        Charset charset = FileEncodingQuery.getEncoding( file );
+        Charset charset = FileEncodingQuery.getEncoding(file);
         return file.asText(charset.name());
     }
 

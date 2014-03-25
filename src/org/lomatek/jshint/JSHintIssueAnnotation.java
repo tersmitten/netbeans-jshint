@@ -10,9 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
-//import java.util.regex.Matcher;
 import org.openide.cookies.LineCookie;
-//import org.openide.text.Line;
 import org.openide.loaders.DataObject;
 import org.openide.text.Annotatable;
 import org.openide.text.Annotation;
@@ -23,7 +21,6 @@ import org.openide.text.Line;
  * @author LORD
  */
 public class JSHintIssueAnnotation extends Annotation {
-    //private static List<Annotation> annotations = new ArrayList<Annotation>();
     private static Map<DataObject, List<Annotation>> annotations = new HashMap<DataObject, List<Annotation>>();
 
     private String reason;
@@ -31,7 +28,6 @@ public class JSHintIssueAnnotation extends Annotation {
 
     public static JSHintIssueAnnotation create(DataObject dObj, int character, String reason) {
         JSHintIssueAnnotation annotation = new JSHintIssueAnnotation(character, reason);
-        //annotations.add(annotation);
         getAnnotationList(dObj).add(annotation);
         return annotation;
     }
@@ -56,7 +52,6 @@ public class JSHintIssueAnnotation extends Annotation {
     }
 
     public static void remove(DataObject dObj, JSHintIssueAnnotation annotation) {
-        //annotations.remove(annotation);
         getAnnotationList(dObj).remove(annotation);
     }
 
@@ -79,10 +74,11 @@ public class JSHintIssueAnnotation extends Annotation {
 
     /** Create an annotation for a line from match string*/
     public static void createAnnotation(
-        final DataObject dObj, final LineCookie cLine, final String reason, final int line, final int character, final int length
+        final DataObject dObj, final LineCookie cLine, final String reason,
+        final int line, final int character, final int length
     ) throws IndexOutOfBoundsException, NumberFormatException {
         try {
-            Line currentLine = cLine.getLineSet().getCurrent(line-1);
+            Line currentLine = cLine.getLineSet().getCurrent(line - 1);
             final Line.Part currentPartLine = currentLine.createPart(character - 1, length);
             final JSHintIssueAnnotation annotation = JSHintIssueAnnotation.create(dObj, character, reason);
 
@@ -96,13 +92,12 @@ public class JSHintIssueAnnotation extends Annotation {
                         // User edited the line, assume error should be cleared.
                         currentPartLine.removePropertyChangeListener(this);
                         annotation.detach();
-                        //annotation.
                         JSHintIssueAnnotation.remove(dObj, annotation);
                     }
                 }
             });
         } catch (IndexOutOfBoundsException e) {
-            // might happen, if state of file is not saved. ignore
+            // Might happen, if state of file is not saved. ignore
         }
     }
 }

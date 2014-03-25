@@ -24,7 +24,6 @@
 package org.lomatek.jshint;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import org.json.simple.JSONObject;
@@ -32,7 +31,6 @@ import org.json.simple.JSONValue;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 import org.openide.filesystems.FileObject;
-import org.openide.util.NbPreferences;
 
 /**
  *

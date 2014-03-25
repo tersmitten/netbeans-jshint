@@ -39,7 +39,6 @@ import org.openide.util.RequestProcessor;
 @ActionReferences({
     @ActionReference(path = "Editors/text/javascript/Popup", position = 400, separatorAfter = 450)
 })
-//@Messages("CTL_JSHintSample=JSHintSample")
 public final class JSHintAction implements ActionListener {
 
     static RequestProcessor processor = null;
