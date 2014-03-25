@@ -38,6 +38,10 @@ public class JSHintIssue {
     private final String b;
     private final int length;
 
+    /**
+     *
+     * @param error
+     */
     public JSHintIssue(Scriptable error) {
         line = ((Number) error.get("line", null)).intValue();
         character = ((Number) error.get("character", null)).intValue();
@@ -52,7 +56,10 @@ public class JSHintIssue {
     }
 
     /**
-     * Convert Rhino object to string
+     * Convert Rhino object to string.
+     *
+     * @param name
+     * @param scope
      * @return String
      */
     private String objectToString(String name, Scriptable scope) {
@@ -61,12 +68,15 @@ public class JSHintIssue {
     }
 
     /**
+     *
      * @return A string of auxiliary information.
      */
     public int getLength() {
         return length;
     }
-     /**
+
+    /**
+     *
      * @return A string of auxiliary information.
      */
     public String getA() {
@@ -74,6 +84,7 @@ public class JSHintIssue {
     }
 
     /**
+     *
      * @return A string of auxiliary information.
      */
     public String getB() {
@@ -81,6 +92,7 @@ public class JSHintIssue {
     }
 
     /**
+     *
      * @return the position of the issue within the line. Starts at 0.
      */
     public int getCharacter() {
@@ -88,6 +100,7 @@ public class JSHintIssue {
     }
 
     /**
+     *
      * @return the number of the line on which this issue occurs.
      */
     public int getLine() {
@@ -95,6 +108,7 @@ public class JSHintIssue {
     }
 
     /**
+     * 
      * @return a textual description of this issue.
      */
     public String getReason() {

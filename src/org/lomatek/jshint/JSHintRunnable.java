@@ -32,13 +32,22 @@ import org.openide.loaders.DataObject;
  * @author Stanislav Lomadurov
  */
 public class JSHintRunnable implements Runnable {
+
     static final String EXECUTABLE_KEY = "jshintExecutable";
     private final DataObject nodeData;
 
+    /**
+     *
+     * @param nodeData
+     * @param commandLineArgs
+     */
     public JSHintRunnable(DataObject nodeData, String commandLineArgs) {
         this.nodeData = nodeData;
     }
 
+    /**
+     * 
+     */
     @Override
     public void run() {
         try {

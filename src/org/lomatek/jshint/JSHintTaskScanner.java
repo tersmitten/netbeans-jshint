@@ -49,16 +49,30 @@ public class JSHintTaskScanner extends FileTaskScanner {
     private static final String GROUP_NAME = "logging-tasklist";
     private Callback callback = null;
 
+    /**
+     *
+     * @param name
+     * @param desc
+     */
     public JSHintTaskScanner(String name, String desc) {
         super(name, desc, null);
     }
 
+    /**
+     *
+     * @return
+     */
     public static JSHintTaskScanner create() {
         String name = NbBundle.getMessage(JSHintTaskScanner.class, "LBL_task");
         String desc = NbBundle.getMessage(JSHintTaskScanner.class, "DESC_task");
         return new JSHintTaskScanner(name, desc);
     }
 
+    /**
+     *
+     * @param file
+     * @return
+     */
     @Override
     public List<? extends Task> scan(FileObject file) {
         // Ignore not JS file
@@ -111,12 +125,22 @@ public class JSHintTaskScanner extends FileTaskScanner {
         return tasks;
     }
 
+    /**
+     *
+     * @param file
+     * @return
+     * @throws IOException
+     */
     private String getContent(FileObject file) throws IOException {
         // Set encoding
         Charset charset = FileEncodingQuery.getEncoding(file);
         return file.asText(charset.name());
     }
 
+    /**
+     * 
+     * @param callback
+     */
     @Override
     public void attach(Callback callback) {
         this.callback = callback;

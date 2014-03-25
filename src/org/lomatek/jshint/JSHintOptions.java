@@ -41,6 +41,10 @@ public class JSHintOptions {
     private static JSHintOptions INSTANCE;
     private static Scriptable options = null;
 
+    /**
+     *
+     * @return
+     */
     public static JSHintOptions getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new JSHintOptions();
@@ -49,7 +53,14 @@ public class JSHintOptions {
         return INSTANCE;
     }
 
-    // Get the Rhino context contains options for JSHint
+    /**
+     * Get the Rhino context contains options for JSHint.
+     *
+     * @param context
+     * @param scope
+     * @param file
+     * @return
+     */
     public Scriptable getOptions(Context context, Scriptable scope, FileObject file) {
         if (null != options) return options;
         options = context.newObject(scope);
@@ -68,6 +79,11 @@ public class JSHintOptions {
         return options;
     }
 
+    /**
+     * 
+     * @param sourceFile
+     * @return
+     */
     public String getOptionsFile(FileObject sourceFile) {
         if (sourceFile.isFolder()) {
             FileObject optionsFile = sourceFile.getFileObject(".jshintrc");

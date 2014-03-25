@@ -45,10 +45,18 @@ public final class JSHintAction implements ActionListener {
 
     private final DataObject context;
 
+    /**
+     *
+     * @param context
+     */
     public JSHintAction(DataObject context) {
         this.context = context;
     }
 
+    /**
+     *
+     * @param ev
+     */
     @Override
     public void actionPerformed(ActionEvent ev) {
         // Start JSHintRunnable

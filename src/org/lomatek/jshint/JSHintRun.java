@@ -53,9 +53,16 @@ final public class JSHintRun {
     private Context context = null;
     private Scriptable scope = null;
 
+    /**
+     *
+     */
     JSHintRun() {
     }
 
+    /**
+     *
+     * @return
+     */
     public static JSHintRun getInstance() {
         if (instance == null) {
             instance = new JSHintRun();
@@ -63,6 +70,12 @@ final public class JSHintRun {
         return instance;
     }
 
+    /**
+     *
+     * @param contents
+     * @param file
+     * @return
+     */
     public List<JSHintIssue> run(String contents, FileObject file) {
         init();
         scope.put("contents", scope, contents);
@@ -87,6 +100,9 @@ final public class JSHintRun {
         return result;
     }
 
+    /**
+     * 
+     */
     public void init() {
         try {
             context = Context.enter();
