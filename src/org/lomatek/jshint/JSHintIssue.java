@@ -64,6 +64,7 @@ public class JSHintIssue {
      */
     private String objectToString(String name, Scriptable scope) {
         Object obj = scope.get(name, scope);
+ 
         return obj instanceof String ? (String) obj : null;
     }
 
@@ -108,7 +109,7 @@ public class JSHintIssue {
     }
 
     /**
-     * 
+     *
      * @return a textual description of this issue.
      */
     public String getReason() {

@@ -62,12 +62,16 @@ public class JSHintOptions {
      * @return
      */
     public Scriptable getOptions(Context context, Scriptable scope, FileObject file) {
-        if (null != options) return options;
+        if (null != options) {
+            return options;
+        }
         options = context.newObject(scope);
 
         String optionText = getOptionsFile(file);
         System.err.println("JSHint options: " + optionText);
-        if (null == optionText) return options;
+        if (null == optionText) {
+            return options;
+        }
 
         JSONObject json = (JSONObject) JSONValue.parse(optionText);
         Iterator iter = json.entrySet().iterator();
@@ -80,7 +84,7 @@ public class JSHintOptions {
     }
 
     /**
-     * 
+     *
      * @param sourceFile
      * @return
      */
@@ -97,8 +101,10 @@ public class JSHintOptions {
             if (!sourceFile.isRoot()) {
                 return getOptionsFile(sourceFile.getParent());
             }
+
             return null;
         }
+
         return getOptionsFile(sourceFile.getParent());
     }
 }

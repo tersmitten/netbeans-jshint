@@ -65,6 +65,7 @@ public class JSHintTaskScanner extends FileTaskScanner {
     public static JSHintTaskScanner create() {
         String name = NbBundle.getMessage(JSHintTaskScanner.class, "LBL_task");
         String desc = NbBundle.getMessage(JSHintTaskScanner.class, "DESC_task");
+
         return new JSHintTaskScanner(name, desc);
     }
 
@@ -122,6 +123,7 @@ public class JSHintTaskScanner extends FileTaskScanner {
         } catch (Exception e) {
             Logger.getLogger(getClass().getName()).log(Level.WARNING, null, e);
         }
+
         return tasks;
     }
 
@@ -134,11 +136,12 @@ public class JSHintTaskScanner extends FileTaskScanner {
     private String getContent(FileObject file) throws IOException {
         // Set encoding
         Charset charset = FileEncodingQuery.getEncoding(file);
+
         return file.asText(charset.name());
     }
 
     /**
-     * 
+     *
      * @param callback
      */
     @Override

@@ -36,6 +36,7 @@ public class JSHintIssueAnnotation extends Annotation {
     public static JSHintIssueAnnotation create(DataObject dObj, int character, String reason) {
         JSHintIssueAnnotation annotation = new JSHintIssueAnnotation(character, reason);
         getAnnotationList(dObj).add(annotation);
+
         return annotation;
     }
 
@@ -58,6 +59,7 @@ public class JSHintIssueAnnotation extends Annotation {
         if (null == annotations.get(dObj)) {
             annotations.put(dObj, new ArrayList<Annotation>());
         }
+
         return annotations.get(dObj);
     }
 
