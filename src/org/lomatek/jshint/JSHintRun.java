@@ -97,7 +97,7 @@ final public class JSHintRun {
             // Add error
             result.add(new JSHintIssue(error));
         }
-        
+
         return result;
     }
 

@@ -46,7 +46,7 @@ public class JSHintRunnable implements Runnable {
     }
 
     /**
-     * 
+     *
      */
     @Override
     public void run() {
